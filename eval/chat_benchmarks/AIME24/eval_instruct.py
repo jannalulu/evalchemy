@@ -122,6 +122,22 @@ class AIME24Benchmark(BaseBenchmark):
         examples = results["examples"]
         num_questions = len(examples)
 
+        # Create samples data for --log_samples to work
+        samples = {}
+        for i, example in enumerate(examples):
+            # Create a sample entry for each example
+            sample_id = f"aime24-{example.get('id', i)}"
+            samples[sample_id] = {
+                "problem": example.get("problem", ""),
+                "expected_answer": example.get("expected_answer", ""),
+                "reference_solution": example.get("reference_solution", ""),
+                "model_outputs": example.get("model_outputs", []),
+                "model_answers": example.get("model_answers", [])
+            }
+        
+        # Add samples to results for --log_samples flag to work
+        results["samples"] = samples
+
         # Calculate accuracy for each repetition
         all_results = []
         for i in range(self.n_repeat):
