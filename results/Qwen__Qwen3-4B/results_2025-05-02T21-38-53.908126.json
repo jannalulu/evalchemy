@@ -1,0 +1,63 @@
+{
+  "results": {
+    "lambada_openai": {
+      "alias": "lambada_openai",
+      "perplexity,none": 7.28349503843457,
+      "perplexity_stderr,none": 0.29655639030298825,
+      "acc,none": 0.593634775858723,
+      "acc_stderr,none": 0.0068427395096176446
+    }
+  },
+  "config": {
+    "model": "hf",
+    "model_args": "pretrained=Qwen/Qwen3-4B,trust_remote_code=True",
+    "tasks": "lambada_openai",
+    "batch_sizes": [
+      64
+    ],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "annotator_model": "auto",
+    "gen_kwargs": null,
+    "random_seed": 0,
+    "numpy_seed": 1234,
+    "torch_seed": 1234,
+    "fewshot_seed": 1234,
+    "model_num_parameters": 4022468096,
+    "model_dtype": "torch.bfloat16",
+    "model_revision": "main",
+    "model_sha": "82d62bb073771e7a1ea59435f548908540217d1f"
+  },
+  "git_hash": "8c99a65",
+  "date": 1746221933.766152,
+  "pretty_env_info": "'NoneType' object has no attribute 'splitlines'",
+  "transformers_version": "4.51.3",
+  "upper_git_hash": null,
+  "tokenizer_pad_token": [
+    "<|endoftext|>",
+    "151643"
+  ],
+  "tokenizer_eos_token": [
+    "<|im_end|>",
+    "151645"
+  ],
+  "tokenizer_bos_token": [
+    null,
+    "None"
+  ],
+  "eot_token_id": 151645,
+  "max_length": 40960,
+  "task_hashes": {},
+  "model_source": "hf",
+  "model_name": "Qwen/Qwen3-4B",
+  "model_name_sanitized": "Qwen__Qwen3-4B",
+  "system_instruction": null,
+  "system_instruction_sha": null,
+  "fewshot_as_multiturn": false,
+  "chat_template": null,
+  "chat_template_sha": null,
+  "start_time": 5522589.902531649,
+  "end_time": 5522671.489882715,
+  "total_evaluation_time_seconds": "81.58735106606036"
+}

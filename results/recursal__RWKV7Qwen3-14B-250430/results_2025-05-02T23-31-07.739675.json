@@ -1,0 +1,63 @@
+{
+  "results": {
+    "lambada_openai": {
+      "alias": "lambada_openai",
+      "perplexity,none": 3.7818587260908862,
+      "perplexity_stderr,none": 0.09684746316802939,
+      "acc,none": 0.6687366582573259,
+      "acc_stderr,none": 0.006557319238079706
+    }
+  },
+  "config": {
+    "model": "hf",
+    "model_args": "pretrained=recursal/RWKV7Qwen3-14B-250430,trust_remote_code=True",
+    "tasks": "lambada_openai",
+    "batch_sizes": [
+      16
+    ],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "annotator_model": "auto",
+    "gen_kwargs": null,
+    "random_seed": 0,
+    "numpy_seed": 1234,
+    "torch_seed": 1234,
+    "fewshot_seed": 1234,
+    "model_num_parameters": 15136537600,
+    "model_dtype": "torch.bfloat16",
+    "model_revision": "main",
+    "model_sha": "a03d3c6788a32d4e0bd69e8275530b4a564d2739"
+  },
+  "git_hash": "8c99a65",
+  "date": 1746228667.5726123,
+  "pretty_env_info": "'NoneType' object has no attribute 'splitlines'",
+  "transformers_version": "4.51.3",
+  "upper_git_hash": null,
+  "tokenizer_pad_token": [
+    "<|endoftext|>",
+    "151643"
+  ],
+  "tokenizer_eos_token": [
+    "<|im_end|>",
+    "151645"
+  ],
+  "tokenizer_bos_token": [
+    null,
+    "None"
+  ],
+  "eot_token_id": 151645,
+  "max_length": 40960,
+  "task_hashes": {},
+  "model_source": "hf",
+  "model_name": "recursal/RWKV7Qwen3-14B-250430",
+  "model_name_sanitized": "recursal__RWKV7Qwen3-14B-250430",
+  "system_instruction": null,
+  "system_instruction_sha": null,
+  "fewshot_as_multiturn": false,
+  "chat_template": null,
+  "chat_template_sha": null,
+  "start_time": 5529250.705344626,
+  "end_time": 5529405.321907808,
+  "total_evaluation_time_seconds": "154.61656318232417"
+}
