@@ -22,6 +22,12 @@ clusters = [
         "eval_sbatch_filename": "simple_tacc.sbatch",
         "gpus_per_node": 1,
     },
+    {
+        "name": "claix",
+        "hostname_pattern": r".*?.hpc.itc.rwth-aachen.de",
+        "eval_sbatch_filename": "simple_claix.sbatch",
+        "gpus_per_node": 4,
+    },
 ]
 
 
