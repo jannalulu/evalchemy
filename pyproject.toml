@@ -157,7 +157,8 @@ dependencies = [
     "flash-linear-attention",
 
     # LM Eval
-    "lm-eval[vllm]",
+    "lm-eval",
+    "vllm",
 ]
 
 [project.urls]
