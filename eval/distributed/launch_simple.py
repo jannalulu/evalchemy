@@ -37,6 +37,13 @@ clusters = [
         "hostname_pattern": r".*?.hpc.itc.rwth-aachen.de",
         "eval_sbatch_filename": "simple_claix.sbatch",
         "gpus_per_node": 4,
+        "internet": True,
+    },
+    {
+        "name": "leonardo",
+        "hostname_pattern": r".*leonardo.*",
+        "eval_sbatch_filename": "simple_leonardo.sbatch",
+        "gpus_per_node": 4,
     },
 ]
 
@@ -199,10 +206,12 @@ def main():
     sbatch_content = re.sub(curly_brace_pattern, lambda m: str(args_dict[m.group(1)]), sbatch_content)
 
     # Launch sbatch
-    new_sbatch_file = os.path.join(logs_dir, f"{output_dataset_name}.sbatch")
+    job_logs_dir = os.path.join(logs_dir, f"{output_dataset_name}")
+    os.makedirs(job_logs_dir, exist_ok=True)
+    new_sbatch_file = os.path.join(job_logs_dir, f"{output_dataset_name}.sbatch")
     job_id = launch_sbatch(sbatch_content, new_sbatch_file, dependency=args.dependency)
     print(f"Launched sbatch job with ID: {job_id}")
-    print(f"Logs: {args_dict['logs_dir']}/{args_dict['job_name']}_{job_id}*.out")
+    print(f"Logs: {job_logs_dir}/{job_id}*.out")
 
 
 if __name__ == "__main__":
