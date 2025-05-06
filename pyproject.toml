@@ -158,7 +158,6 @@ dependencies = [
 
     # LM Eval
     "lm-eval",
-    "vllm",
 ]
 
 [project.urls]
