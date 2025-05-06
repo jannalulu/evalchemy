@@ -94,7 +94,7 @@ dependencies = [
     "tree_sitter",
     "asttokens",
     "mypy_extensions",
-    # "pyext @ git+https://github.com/jannalulu/PyExt",
+    # "pyext @ git+https://github.com/penfever/PyExt",
     
     # Web & API
     "fastapi>=0.101.0",
@@ -157,7 +157,7 @@ dependencies = [
     "flash-linear-attention",
 
     # LM Eval
-    "lm-eval",
+    "lm-eval[vllm] @ git+https://github.com/EtashGuha/lm-evaluation-harness",
 ]
 
 [project.urls]
