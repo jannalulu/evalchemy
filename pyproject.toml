@@ -157,7 +157,7 @@ dependencies = [
     "flash-linear-attention",
 
     # LM Eval
-    "lm-eval[vllm] @ git+https://github.com/EleutherAI/lm-evaluation-harness@0.4.6",
+    "lm-eval[vllm] @ git+https://github.com/EleutherAI/lm-evaluation-harness@v0.4.6",
 ]
 
 [project.urls]
