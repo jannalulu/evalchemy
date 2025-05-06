@@ -1,0 +1,86 @@
+{
+  "results": {
+    "AIME25": {
+      "examples": [
+        {
+          "id": "I-1",
+          "problem": "Find the sum of all integer bases $b > 9$ for which $17_b$ is a divisor of $97_b$.",
+          "solution": "",
+          "answer": "70",
+          "url": "",
+          "model_outputs": [
+            "To solve this problem, we need to find all integer bases \\( b > 9 \\) for which \\( 17_b \\) is a divisor of \\( 97_b \\). Here's the step-by-step process:\n\n1. **Convert \\( 17_b \\) and \\( 97_b \\) to base 10:**\n   - \\( 17_b = 1 \\cdot b + 7 = b + 7 \\)\n   - \\( 97_b = 9 \\cdot b + 7 = 9b + 7 \\)\n\n2. **Set up the divisibility condition:**\n   \\[\n   b + 7 \\mid 9b + 7\n   \\]\n\n3. **Simplify the divisibility condition:**\n   \\[\n   b + 7 \\mid 9b + 7\n   \\]\n   \\[\n   b + 7 \\mid 9b + 7 - 9(b + 7)\n   \\]\n   \\[\n   b + 7 \\mid 9b + 7 - 9b - 63\n   \\]\n   \\[\n   b + 7 \\mid -60\n   \\]\n\n4. **Find the divisors of -60:**\n   The divisors of -60 are:\n   \\[\n   \\pm 1, \\pm 2, \\pm 3, \\pm 4, \\pm 5, \\pm 6, \\pm 10, \\pm 12, \\pm 15, \\pm 20, \\pm 30, \\pm 60\n   \\]\n\n5. **Find the valid bases \\( b \\):**\n   We need \\( b + 7 > 9 \\), so \\( b > 2 \\). Therefore, we only consider positive divisors greater than 2:\n   \\[\n   b + 7 = 10 \\implies b = 3\n   \\]\n   \\[\n   b + 7 = 12 \\implies b = 5\n   \\]\n   \\[\n   b + 7 = 15 \\implies b = 8\n   \\]\n   \\[\n   b + 7 = 20 \\implies b = 13\n   \\]\n   \\[\n   b + 7 = 30 \\implies b = 23\n   \\]\n   \\[\n   b + 7 = 60 \\implies b = 53\n   \\]\n\n6. **Verify the solutions:**\n   - For \\( b = 13 \\):\n     \\[\n     17_{10} = 17_{10}, \\quad 97_{10} = 120_{10}\n     \\]\n     \\[\n     120 \\div 17 = 7 \\text{ remainder } 1 \\quad \\text{(not divisible)}\n     \\]\n   - For \\( b = 12 \\):\n     \\[\n     12_{10} = 12_{10}, \\quad 97_{10} = 117_{10}\n     \\]\n     \\[\n     120 \\div 17 = 7 \\text{ remainder } 5 \\quad \\text{(not divisible)}\n     \\]\n   - For \\( b = 11 \\):\n     \\[\n     11_{10} = 11_{10}, \\quad 97_{10} = 117_{10}\n     \\]\n     \\[\n     117 \\div 11 = 10 \\text{ remainder } 7 \\quad \\text{(not divisible)}\n     \\]\n   - For \\( b = 10 \\):\n     \\[\n     10_{10} = 10_{10}, \\quad 97_{10} = 107_{10}\n     \\]\n     \\[\n     100 \\div 10 = 10 \\text{ remainder } 0 \\quad \\text{(not divisible)}\n     \\]\n   - For \\( b = 9 \\):\n     \\[\n     9_{10} = 9_{10}, \\quad 97_{10} = 126_{10}\n     \\]\n     \\[\n     126 \\div 9 = 14 \\text{ remainder } 0 \\quad \\text{(divisible)}\n     \\]\n   - For \\( b = 8 \\):\n     \\[\n     8_{10} = 8_{10}, \\quad 97_{10} = 115_{10}\n     \\]\n     \\[\n     115 \\div 8 = 14 \\text{ remainder } 3 \\quad \\text{(not divisible)}\n   \\]\n   - For \\( b = 7 \\):\n     \\[\n     7_{10} = 7_{10}, \\quad 97_{10} = 132_{10}\n     \\]\n     \\[\n     132 \\div 7 = 18 \\text{ remainder } 6 \\quad \\text{(not divisible)}\n   \\]\n   - For \\( b = 6 \\):\n     \\[\n     6_{10} = 6_{10}, \\quad 97_{10} = 111_{10}\n     \\]\n     \\[\n     111 \\div 6 = 18 \\text{ remainder } 3 \\quad \\text{(not divisible)}\n   \\]\n   - For \\( b = 5 \\):\n     \\[\n     5_{10} = 5_{10}, \\quad 97_{10} = 132_{10}\n     \\]\n     \\[\n     132 \\div 5 = 26 \\text{ remainder } 2 \\quad \\text{(not divisible)}\n   \\]\n   - For \\( b = 4 \\):\n     \\[\n     4_{10} = 4_{10}, \\quad 97_{10} = 121_{10}\n     \\]\n     \\[\n     121 \\div 4 = 30 \\text{ remainder } 1 \\quad \\text{(not divisible)}\n   \\]\n   - For \\( b = 3 \\):\n     \\[\n     3_{10} = 3_{10}, \\quad 97_{10} = 1101_3\n     \\]\n     \\[\n     1101_3 \\div 3 = 120_3 \\quad \\text{(not divisible)}\n   \\]\n   - For \\( b = 2 \\):\n     \\[\n     2_{10} = 10_2, \\quad 97_{10} = 110001_2\n     \\]\n     \\[\n     100101_2 \\div 10_2 = 100101_2 \\quad \\text{(not divisible)}\n   \\]\n   - For \\( b = 1 \\):\n     \\[\n     1_{10} = 1_1, \\quad 97_{10} = 1100001_1\n     \\]\n     \\[\n     1001001_1 \\div 1_1 = 1001001_1 \\quad \\text{(not divisible)}\n   \\]\n\n7. **Conclusion:**\n   The only valid base \\( b \\) that satisfies the condition is \\( b = 12 \\).\n\nThe final answer is \\( \\boxed{12} \\)."
+          ],
+          "model_answers": [
+            "12"
+          ]
+        }
+      ],
+      "num_total": 1,
+      "solved_avg": 0.0,
+      "run_stats": [
+        {
+          "repetition": 1,
+          "num_total": 1,
+          "num_solved": 0,
+          "accuracy": 0.0
+        }
+      ],
+      "accuracy_avg": 0.0,
+      "accuracy_std_err": 0.0,
+      "num_repeat": 1
+    }
+  },
+  "config": {
+    "model": "hf",
+    "model_args": "pretrained=recursal/RWKV7Qwen3-8B-Base-250503,trust_remote_code=True",
+    "tasks": "AIME25",
+    "batch_sizes": [
+      128
+    ],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "annotator_model": "auto",
+    "gen_kwargs": null,
+    "random_seed": 0,
+    "numpy_seed": 1234,
+    "torch_seed": 1234,
+    "fewshot_seed": 1234,
+    "model_num_parameters": 8436986880,
+    "model_dtype": "torch.bfloat16",
+    "model_revision": "main",
+    "model_sha": "e32356239ea6d9c0a467fe87c076e74f90afd7e2"
+  },
+  "git_hash": "8243819",
+  "date": 1746557436.4335074,
+  "pretty_env_info": "'NoneType' object has no attribute 'splitlines'",
+  "transformers_version": "4.51.3",
+  "upper_git_hash": null,
+  "tokenizer_pad_token": [
+    "<|endoftext|>",
+    "151643"
+  ],
+  "tokenizer_eos_token": [
+    "<|im_end|>",
+    "151645"
+  ],
+  "tokenizer_bos_token": [
+    null,
+    "None"
+  ],
+  "eot_token_id": 151645,
+  "max_length": 40960,
+  "task_hashes": {},
+  "model_source": "hf",
+  "model_name": "recursal/RWKV7Qwen3-8B-Base-250503",
+  "model_name_sanitized": "recursal__RWKV7Qwen3-8B-Base-250503",
+  "system_instruction": null,
+  "system_instruction_sha": null,
+  "fewshot_as_multiturn": false,
+  "chat_template": null,
+  "chat_template_sha": null,
+  "start_time": 5857466.787553321,
+  "end_time": 5858174.513522555,
+  "total_evaluation_time_seconds": "707.7259692344815"
+}
