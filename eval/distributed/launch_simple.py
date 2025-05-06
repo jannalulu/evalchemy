@@ -7,7 +7,8 @@ import socket
 import subprocess
 import time
 
-from huggingface_hub import HfApi
+from datasets import load_dataset
+from huggingface_hub import HfApi, snapshot_download
 
 clusters = [
     {
@@ -15,12 +16,21 @@ clusters = [
         "hostname_pattern": r"c\d",
         "eval_sbatch_filename": "simple_zih.sbatch",
         "gpus_per_node": 4,
+        "internet": True,
     },
     {
         "name": "vista",
         "hostname_pattern": r".*?.vista.tacc.utexas.edu",
         "eval_sbatch_filename": "simple_tacc.sbatch",
         "gpus_per_node": 1,
+        "internet": True,
+    },
+    {
+        "name": "jureca",
+        "hostname_pattern": r"jr.*?.jureca",
+        "eval_sbatch_filename": "simple_jureca.sbatch",
+        "gpus_per_node": 4,
+        "internet": False,
     },
     {
         "name": "claix",
@@ -159,8 +169,22 @@ def main():
         )
     num_nodes = int(args.num_shards / cluster["gpus_per_node"])
 
-    # Create sbatch
+    # Args
     args_dict = vars(args)
+
+    if not cluster["internet"]:
+        output_dataset = os.path.join(os.environ["EVALCHEMY_RESULTS_DIR"], output_dataset.split("/")[-1])
+        print(
+            f"Downloading model and dataset due to offline mode, will only save shards to {output_dataset} and won't upload or score"
+        )
+        HF_HUB_CACHE = os.environ["HF_HUB_CACHE"]
+        dataset_path = snapshot_download(repo_id=input_dataset, cache_dir=HF_HUB_CACHE, repo_type="dataset")
+        load_dataset(input_dataset, split="train", cache_dir=HF_HUB_CACHE)
+        model_path = snapshot_download(repo_id=args.model_name, cache_dir=HF_HUB_CACHE)
+        input_dataset = dataset_path
+        args_dict["model_name"] = model_path
+
+    # Create sbatch
     args_dict["num_nodes"] = num_nodes
     args_dict["time_limit"] = f"{args.max_job_duration:02d}:00:00"
     args_dict["job_name"] = f"{output_dataset_name}"
