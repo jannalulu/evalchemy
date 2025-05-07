@@ -51,7 +51,7 @@ class GPQADiamondBenchmark(BaseBenchmark):
         self.debug = debug
         self.seed = seed
         self.max_new_tokens = 32768
-        self.n_repeat = 3
+        self.n_repeat = 1
 
     def generate_responses(self, model: LM) -> Dict[str, Any]:
         """
