@@ -49,7 +49,7 @@ class AIME24Benchmark(BaseBenchmark):
         self.debug = debug
         self.max_new_tokens = 32768  # set higher to avoid truncation for reasoning models
         self.seed = seed
-        self.n_repeat = 1 if debug else 5  # Only do 1 repeat in debug mode
+        self.n_repeat = 2 if debug else 3  # Only do 1 repeat in debug mode
 
     def _generate_with_logging(self, model: LM, instance: Instance) -> str:
         """Generate a single response with real-time logging"""
@@ -67,8 +67,8 @@ class AIME24Benchmark(BaseBenchmark):
             sys.stdout.flush()  # Force output to be printed immediately
             results = original_generate(instances)
             print(f"\nGeneration complete at {time.strftime('%H:%M:%S')}!")
-            print(f"OUTPUT: {results[0]}")
-            print(f"{'='*80}")
+            #print(f"OUTPUT: {results[0]}")
+            # print(f"{'='*80}")
             sys.stdout.flush()
             return results
             

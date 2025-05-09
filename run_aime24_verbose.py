@@ -15,7 +15,7 @@ parser = argparse.ArgumentParser(description="Run AIME24 evaluation with real-ti
 parser.add_argument("--model", default="hf", help="Model type (e.g., hf)")
 parser.add_argument("--model_args", default="pretrained=Qwen/Qwen3-4B,trust_remote_code=True", 
                     help="Model arguments")
-parser.add_argument("--batch_size", default=6, type=int, help="Batch size")
+parser.add_argument("--batch_size", default=8, type=int, help="Batch size")
 parser.add_argument("--limit", default=1, type=int, help="Number of examples to evaluate")
 parser.add_argument("--output_path", default="results", help="Output directory")
 args = parser.parse_args()

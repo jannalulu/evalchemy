@@ -24,7 +24,7 @@ class AIME25Benchmark(BaseBenchmark):
 
     def __init__(
         self,
-        data_file: str = "eval/chat_benchmarks/AIME25/data/aime25.json",
+        data_file: str = "eval/chat_benchmarks/AIME25/data/aime25_limit.json",
         debug: bool = False,
         seed: List[int] = [0, 1234, 1234, 1234],
         logger: Optional[logging.Logger] = None,
@@ -44,11 +44,7 @@ class AIME25Benchmark(BaseBenchmark):
         self.debug = debug
         self.max_new_tokens = 32768  # set higher to avoid truncation for reasoning models
         self.seed = seed
-<<<<<<< Updated upstream
         self.n_repeat = 1
-=======
-        self.n_repeat = 2
->>>>>>> Stashed changes
 
     def generate_responses(self, model: LM) -> Dict[str, Any]:
         """
