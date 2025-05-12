@@ -154,10 +154,10 @@ dependencies = [
     "swebench>=3.0.4",
 
     # rwkv
-    "flash-linear-attention",
+    "flash-linear-attention @ git+https://github.com/fla-org/flash-linear-attention@v0.1.2",
 
     # LM Eval
-    "lm-eval[vllm] @ git+https://github.com/EleutherAI/lm-evaluation-harness@v0.4.7",
+    "lm-eval[vllm] @ git+https://github.com/jannalulu/lm-evaluation-harness",
 ]
 
 [project.urls]
