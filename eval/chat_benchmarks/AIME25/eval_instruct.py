@@ -44,11 +44,7 @@ class AIME25Benchmark(BaseBenchmark):
         self.debug = debug
         self.max_new_tokens = 32768  # set higher to avoid truncation for reasoning models
         self.seed = seed
-<<<<<<< Updated upstream
         self.n_repeat = 1
-=======
-        self.n_repeat = 2
->>>>>>> Stashed changes
 
     def generate_responses(self, model: LM) -> Dict[str, Any]:
         """
