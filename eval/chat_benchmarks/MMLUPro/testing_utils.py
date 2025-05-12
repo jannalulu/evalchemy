@@ -6,7 +6,7 @@ import re
 
 
 def get_multiple_choice_answer(pred: str):
-    tmp = re.findall(r"\b(A|B|C|D)\b", pred.upper())
+    tmp = re.findall(r"\b(A|B|C|D|E|F|G|H|I|J)\b", pred.upper())
     if tmp:
         pred = tmp
     else:

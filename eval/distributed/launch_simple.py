@@ -26,6 +26,13 @@ clusters = [
         "internet": True,
     },
     {
+        "name": "alpha",
+        "hostname_pattern": r".*?.alpha.hpc.tu-dresden.de",
+        "eval_sbatch_filename": "simple_alpha.sbatch",
+        "gpus_per_node": 8,
+        "internet": True,
+    },
+    {
         "name": "jureca",
         "hostname_pattern": r"jr.*?.jureca",
         "eval_sbatch_filename": "simple_jureca.sbatch",

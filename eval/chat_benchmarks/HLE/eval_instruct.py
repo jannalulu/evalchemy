@@ -17,9 +17,9 @@ from .testing_utils import get_multiple_choice_answer
 
 # Adapted from https://github.com/centerforaisafety/hle/blob/main/hle_eval/run_model_predictions.py
 
-SYSTEM_EXACT_ANSWER = "Your response should be in the following format:\nExplanation: {your explanation for your final answer}\nExact Answer: {your succinct, final answer}\nConfidence: {your confidence score between 0% and 100% for your answer}"
+SYSTEM_EXACT_ANSWER = "Your response should be in the following format:\nExact Answer: {your succinct, final answer}."
 
-SYSTEM_MC = "Your response should be in the following format:\nExplanation: {your explanation for your answer choice}\nAnswer: {your chosen answer}\nConfidence: {your confidence score between 0% and 100% for your answer}"
+SYSTEM_MC = "Your response should be in the following format:\nAnswer: {your chosen answer}."
 
 HF_HUB_CACHE = os.environ.get("HF_HUB_CACHE")
 if not HF_HUB_CACHE:
