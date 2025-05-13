@@ -29,6 +29,7 @@ from eval.constants import LIST_OPENAI_MODELS
 from eval.eval_tracker import DCEvaluationTracker
 from eval.task import TaskManager as InstructTaskManager
 
+eval_logger = logging.getLogger(__name__)
 
 def setup_custom_parser():
     """
@@ -303,7 +304,6 @@ def cli_evaluate(args: Optional[argparse.Namespace] = None) -> None:
     task_list = args.tasks.split(",")
 
     # Initialize logging
-    eval_logger = logging.getLogger(__name__)
     eval_logger.setLevel(getattr(logging, f"{args.verbosity}"))    
 
     # If model_id is provided, lookup model weights location from database
