@@ -20,7 +20,7 @@ from lm_eval.api.model import LM
 from lm_eval.loggers import EvaluationTracker, WandbLogger
 from lm_eval.loggers.utils import add_env_info, add_tokenizer_info, get_git_commit_hash
 from lm_eval.tasks import TaskManager as PretrainTaskManager
-from lm_eval.utils import handle_non_serializable, sanitize_model_name, simple_parse_args_string
+from lm_eval.utils import setup_logging, handle_non_serializable, sanitize_model_name, simple_parse_args_string
 
 from eval.chat_benchmarks.curator_lm import CuratorAPIModel  # register curator model
 from eval.chat_benchmarks.precomputed_hf_lm import PrecomputedHFLM  # register precomputed_hf model
@@ -129,8 +129,8 @@ def evaluate(
             Dictionary mapping task names to their evaluation results.
             Each result dictionary contains metrics specific to that task.
     """
-    eval_logger = eval_logger = logging.getLogger(__name__)
-    eval_logger.setLevel(getattr(logging, f"{verbosity}"))
+    if verbosity is not None:
+        setup_logging(verbosity=verbosity)
 
     # Split tasks between benchmark and pretrain
     benchmark_tasks = [t for t in task_list if t in task_manager.tasks]
@@ -302,9 +302,6 @@ def cli_evaluate(args: Optional[argparse.Namespace] = None) -> None:
     evaluation_tracker = setup_evaluation_tracker(args.output_path, args.use_database)
 
     task_list = args.tasks.split(",")
-
-    # Initialize logging
-    eval_logger.setLevel(getattr(logging, f"{args.verbosity}"))    
 
     # If model_id is provided, lookup model weights location from database
     if args.model_id:
