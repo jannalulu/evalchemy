@@ -43,7 +43,7 @@ class AIME24Benchmark(BaseBenchmark):
         super().__init__(logger=logger, system_instruction=system_instruction)
         self.data_file = data_file
         self.debug = debug
-        self.max_new_tokens = 32768  # set higher to avoid truncation for reasoning models
+        # self.max_new_tokens = 32768  # set higher to avoid truncation for reasoning models
         self.seed = seed
         self.n_repeat = 1
 
@@ -80,7 +80,9 @@ class AIME24Benchmark(BaseBenchmark):
                         templated_messages,
                         {
                             "do_sample": False,
-                            "max_new_tokens": self.max_new_tokens,
+                            "max_gen_length_stage1": 1024,
+                            "unthink_string": "</think>\n\n### :white_check_mark: Final Answer:\n\n",
+                            "extra_tokens_after_unthink": 64,
                             "temperature": 0.7,
                             "seed": seed,
                         },
