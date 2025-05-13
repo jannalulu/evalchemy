@@ -1,0 +1,87 @@
+{
+  "results": {
+    "AIME25": {
+      "examples": [
+        {
+          "id": "I-1",
+          "problem": "Find the sum of all integer bases $b > 9$ for which $17_b$ is a divisor of $97_b$.",
+          "solution": "",
+          "answer": "70",
+          "url": "",
+          "model_outputs": [
+            "<think>\nOkay, so I need to find all integer bases b > 9 such that 17_b divides 97_b. Hmm, okay. Let me start by recalling what it means for one number to divide another in a different base. \n\nFirst, I need to convert both numbers from base b to base 10, right? Because then I can work with them in a more familiar number system. Let me recall how base conversion works. \n\nIn base b, the number 17_b would be equal to 1*b^1 + 7*b^0. Similarly, 97_b would be 9*b^1 + 7*b^0. So, converting both numbers to base 10, we have:\n\n17_b = 1*b + 7 = b + 7\n\n97_b = 9*b + 7\n\nSo, the problem is asking for all integers b > 9 such that (97_b) is divisible by (17_b). In other words, (97_b) divided by (17_b) should result in an integer. \n\nSo, mathematically, we can write this as:\n\n(97_b) / (17_b) = (9b + 7) / (b + 7) must be an integer.\n\nTherefore, the problem reduces to finding all integers b > 9 such that (9b + 7) is divisible by (b + 7). \n\nLet me write that as:\n\n(9b + 7) / (b + 7) is an integer.\n\nNow, I need to find all integers b > 9 such that this fraction is an integer. \n\nTo solve this, I can perform polynomial division or use algebraic manipulation to simplify the expression. Let me try polynomial division. \n\nDivide 9b + 7 by b + 7. \n\nLet me write it out:\n\nDivide 9b + 7 by b + 7. \n\nFirst term: 9b divided by b is 9. Multiply (b + 7) by 9: 9b + 63. Subtract that from 9b + 7:\n\n(9b + 7) - (9b + 63) = 9b + 7 - 9b - 63 = -56. \n\nSo, the division gives 9 with a remainder of -56. Therefore, we can</think>\n\n### :white_check_mark: Final Answer:\n\n\\boxed{10}\n\n**Step-by-Step Explanation:**\n\n1. **Convert Bases to Integers:**\n   - $17_b = b + 7$\n   - $97_b = 9b + 7$\n\n2. **Set Up the Division:**\n   - We need"
+          ],
+          "model_answers": [
+            "10"
+          ]
+        }
+      ],
+      "num_total": 1,
+      "solved_avg": 0.0,
+      "run_stats": [
+        {
+          "repetition": 1,
+          "num_total": 1,
+          "num_solved": 0,
+          "accuracy": 0.0
+        }
+      ],
+      "accuracy_avg": 0.0,
+      "accuracy_std_err": 0.0,
+      "num_repeat": 1
+    }
+  },
+  "config": {
+    "model": "hf",
+    "model_args": "pretrained=recursal/RWKV7Qwen3-8B-Instruct-dclmbigbrain-250509,trust_remote_code=True",
+    "tasks": "AIME25",
+    "batch_sizes": [
+      256
+    ],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "annotator_model": "auto",
+    "gen_kwargs": null,
+    "random_seed": 0,
+    "numpy_seed": 1234,
+    "torch_seed": 1234,
+    "fewshot_seed": 1234,
+    "model_num_parameters": 8436986880,
+    "model_dtype": "torch.bfloat16",
+    "model_revision": "main",
+    "model_sha": "9ea2688f190d3fe5710594b729b71b616c9738d2"
+  },
+  "git_hash": "4a98de7",
+  "date": 1747104143.3696485,
+  "pretty_env_info": "'NoneType' object has no attribute 'splitlines'",
+  "transformers_version": "4.51.3",
+  "lm_eval_version": "0.4.8",
+  "upper_git_hash": null,
+  "tokenizer_pad_token": [
+    "<|endoftext|>",
+    "151643"
+  ],
+  "tokenizer_eos_token": [
+    "<|im_end|>",
+    "151645"
+  ],
+  "tokenizer_bos_token": [
+    null,
+    "None"
+  ],
+  "eot_token_id": 151645,
+  "max_length": 40960,
+  "task_hashes": {},
+  "model_source": "hf",
+  "model_name": "recursal/RWKV7Qwen3-8B-Instruct-dclmbigbrain-250509",
+  "model_name_sanitized": "recursal__RWKV7Qwen3-8B-Instruct-dclmbigbrain-250509",
+  "system_instruction": null,
+  "system_instruction_sha": null,
+  "fewshot_as_multiturn": false,
+  "chat_template": null,
+  "chat_template_sha": null,
+  "start_time": 13778920.468593124,
+  "end_time": 13778974.855600016,
+  "total_evaluation_time_seconds": "54.38700689189136"
+}
