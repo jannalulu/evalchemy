@@ -78,11 +78,13 @@ class AIME25Benchmark(BaseBenchmark):
                     (
                         templated_messages,
                         {
-                            "do_sample": False,
+                            "do_sample": True,
+                            "temperature": 0.6,
+                            "top_p": 0.95,
+                            "top_k": 20,
                             "max_gen_length_stage1": 1024,
                             "unthink_string": "</think>\n\n### :white_check_mark: Final Answer:\n\n",
                             "extra_tokens_after_unthink": 64,
-                            "temperature": 0.7,
                             "seed": seed,
                         },
                     ),
