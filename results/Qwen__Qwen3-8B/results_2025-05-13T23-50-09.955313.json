@@ -1,0 +1,464 @@
+{
+  "results": {
+    "AIME25": {
+      "examples": [
+        {
+          "id": "I-1",
+          "problem": "Find the sum of all integer bases $b > 9$ for which $17_b$ is a divisor of $97_b$.",
+          "solution": "",
+          "answer": "70",
+          "url": "",
+          "model_outputs": [
+            "user\nProblem: Find the sum of all integer bases $b > 9$ for which $17_b$ is a divisor of $97_b$.\nMark your solution with \\boxed\nAnswer:\nassistant\n<think></think>\n\nWe are given the problem:\n\n> Find the sum of all integer bases $ b > 9 $ for which $ 17_b $ is a divisor of $ 97_b $.\n\n---\n\n### Step 1: Convert the base-$ b $ numbers to base-10\n\nWe are dealing with numbers in base $ b $, so we'll convert $ 17_b $ and $ 97_b $ to base-10:\n\n- $ 17_b = 1 \\cdot b + 7 = b + 7 $\n- $ 97_b = 9 \\cdot b + "
+          ],
+          "model_answers": [
+            ""
+          ]
+        },
+        {
+          "id": "I-2",
+          "problem": "On $\\triangle ABC$, points $A$, $D$, $E$, and $B$ lie in that order on side $\\overline{AB}$ with $AD = 4$, $DE = 16$, and $EB = 8$. Points $A$, $F$, $G$, and $C$ lie in that order on side $\\overline{AC}$ with $AF = 13$, $FG = 52$, and $GC = 26$. Let $M$ be the reflection of $D$ through $F$, and let $N$ be the reflection of $G$ through $E$. Quadrilateral $DEGF$ has area 288. Find the area of heptagon $AFNBCEM$.",
+          "solution": "",
+          "answer": "588",
+          "url": "",
+          "model_outputs": [
+            " $AF = 13$, $FG = 52$, and $GC = 26$. Let $M$ be the reflection of $D$ through $F$, and let $N$ be the reflection of $G$ through $E$. Quadrilateral $DEGF$ has area 288. Find the area of heptagon $AFNBCEM$.\nMark your solution with \\boxed\nAnswer:\nassistant\n<think></think>\n\nWe are given a geometric configuration involving triangle $ \\triangle ABC $, with points on sides $ \\overline{AB} $ and $ \\overline{AC} $, and certain reflections and areas. The goal is to find the area of the heptagon $ AFNBCEM $, given that the area of quadrilateral $ DEGF $ is 288.\n\n---\n\n### Step 1: Understand the configuration\n\n- Points on $ \\overline{AB} $: $ A, D, E, B $ in that order.\n  - $ AD = 4 $\n  - $ DE = "
+          ],
+          "model_answers": [
+            ""
+          ]
+        },
+        {
+          "id": "I-3",
+          "problem": "The 9 members of a baseball team went to an ice-cream parlor after their game. Each player had a singlescoop cone of chocolate, vanilla, or strawberry ice cream. At least one player chose each flavor, and the number of players who chose chocolate was greater than the number of players who chose vanilla, which was greater than the number of players who chose strawberry. Let $N$ be the number of different assignments of flavors to players that meet these conditions. Find the remainder when $N$ is divided by 1000.",
+          "solution": "",
+          "answer": "16",
+          "url": "",
+          "model_outputs": [
+            "user\nProblem: The 9 members of a baseball team went to an ice-cream parlor after their game. Each player had a singlescoop cone of chocolate, vanilla, or strawberry ice cream. At least one player chose each flavor, and the number of players who chose chocolate was greater than the number of players who chose vanilla, which was greater than the number of players who chose strawberry. Let $N$ be the number of different assignments of flavors to players that meet these conditions. Find the remainder when $N$ is divided by 1000.\nMark your solution with \\boxed\nAnswer:\nassistant\n<think></think>\n\nWe are given that 9 players each choose one of three flavors: chocolate (C), vanilla (V), or strawberry (S). The constraints are:\n\n- Each player chooses **exactly one** flavor.\n- At least one player chooses each flavor.\n- The number of players who chose chocolate is **greater** than the number who chose vanilla.\n- The number of players who chose vanilla is **greater** than the number who chose strawberry.\n\nWe are to find the number of **assignments** of flavors to players that meet these conditions, and then find the remainder when that number is divided by 1000.\n\n---\n\n###"
+          ],
+          "model_answers": [
+            ""
+          ]
+        },
+        {
+          "id": "I-4",
+          "problem": "Find the number of ordered pairs $(x,y)$, where both $x$ and $y$ are integers between -100 and 100, inclusive, such that $12x^2 - xy - 6y^2 = 0$.",
+          "solution": "",
+          "answer": "117",
+          "url": "",
+          "model_outputs": [
+            "user\nProblem: Find the number of ordered pairs $(x,y)$, where both $x$ and $y$ are integers between -100 and 100, inclusive, such that $12x^2 - xy - 6y^2 = 0$.\nMark your solution with \\boxed\nAnswer:\nassistant\n<think></think>\n\nWe are given the equation:\n\n$$\n12x^2 - xy - 6y^2 = 0\n$$\n\nand we are to find the number of **ordered pairs** $(x, y)$ such that both $x$ and $y$ are **integers between -100 and 100**, inclusive.\n\n---\n\n### Step 1: Factor the equation\n\nWe can try factoring the quadratic expression:\n\n$$\n12x^2 - xy - 6y^2 = 0\n$$\n\nThis is a quadratic in $x$, so we can factor it as:\n\n$$"
+          ],
+          "model_answers": [
+            ""
+          ]
+        },
+        {
+          "id": "I-5",
+          "problem": "There are $8! = 40320$ eight-digit positive integers that use each of the digits $1,2,3,4,5,6,7,8$ exactly once. Let $N$ be the number of these integers that are divisible by 22. Find the difference between $N$ and 2025.",
+          "solution": "",
+          "answer": "279",
+          "url": "",
+          "model_outputs": [
+            "user\nProblem: There are $8! = 40320$ eight-digit positive integers that use each of the digits $1,2,3,4,5,6,7,8$ exactly once. Let $N$ be the number of these integers that are divisible by 22. Find the difference between $N$ and 2025.\nMark your solution with \\boxed\nAnswer:\nassistant\n<think></think>\n\nWe are given that there are $8! = 40320$ eight-digit numbers that use each of the digits $1,2,3,4,5,6,7,8$ exactly once. We are to find the number $N$ of such numbers that are divisible by 22, and then compute the difference $N - 2025$.\n\n---\n\n### Step 1: Understand the divisibility by 22\n\nA number is divisible by **22** if and only if it is divisible by both **2** and **11**.\n\n#### Divisibility"
+          ],
+          "model_answers": [
+            ""
+          ]
+        },
+        {
+          "id": "I-6",
+          "problem": "An isosceles trapezoid has an inscribed circle tangent to each of its four sides. The radius of the circle is 3, and the area of the trapezoid is 72. Let the parallel sides of the trapezoid have lengths $r$ and $s$, with $r \\neq s$. Find $r^2 + s^2$.",
+          "solution": "",
+          "answer": "504",
+          "url": "",
+          "model_outputs": [
+            "user\nProblem: An isosceles trapezoid has an inscribed circle tangent to each of its four sides. The radius of the circle is 3, and the area of the trapezoid is 72. Let the parallel sides of the trapezoid have lengths $r$ and $s$, with $r \\neq s$. Find $r^2 + s^2$.\nMark your solution with \\boxed\nAnswer:\nassistant\n<think></think>\n\nWe are given an **isosceles trapezoid** with an **inscribed circle** (i.e., it is a **tangential trapezoid**) with radius $ r = 3 $, and the **area** of the trapezoid is 72. We are to find $ r^2 + s^2 $, where $ r $ and $ s $ are the lengths of the **parallel sides** of the trapezoid.\n\n---\n\n### Step 1: Properties of a Tangential Trapezoid\n\nA trapezoid is **tangential** (has"
+          ],
+          "model_answers": [
+            ""
+          ]
+        },
+        {
+          "id": "I-7",
+          "problem": "The twelve letters $A$, $B$, $C$, $D$, $E$, $F$, $G$, $H$, $I$, $J$, $K$, and $L$ are randomly grouped into six pairs of letters. The two letters in each pair are placed next to each other in alphabetical order to form six two-letter words, and then those six words are listed alphabetically. For example, a possible result is $AB,CJ,DG,EK,FL,HI$. The probability that the last word listed contains $G$ is $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m + n$.",
+          "solution": "",
+          "answer": "821",
+          "url": "",
+          "model_outputs": [
+            " pairs of letters. The two letters in each pair are placed next to each other in alphabetical order to form six two-letter words, and then those six words are listed alphabetically. For example, a possible result is $AB,CJ,DG,EK,FL,HI$. The probability that the last word listed contains $G$ is $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m + n$.\nMark your solution with \\boxed\nAnswer:\nassistant\n<think></think>\n\nWe are given 12 letters: $ A, B, C, D, E, F, G, H, I, J, K, L $. These are randomly grouped into six pairs. Each pair is placed next to each other to form a two-letter word, and then all six words are listed in alphabetical order. We are to find the probability that the **last word listed** contains the letter **G**.\n\n---\n\n### Step 1: Understanding the Process\n\n- There are 12 letters, so there are $ \\binom{12}{2} \\times \\binom{10}{"
+          ],
+          "model_answers": [
+            ""
+          ]
+        },
+        {
+          "id": "I-8",
+          "problem": "Let $k$ be a real number such that the system\n$|25 + 20i - z| = 5$\n$|z - 4 - k| = |z - 3i - k|$\nhas exactly one complex solution $z$. The sum of all possible values of $k$ can be written as $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m + n$. Here $i = \\sqrt{-1}$.",
+          "solution": "",
+          "answer": "77",
+          "url": "",
+          "model_outputs": [
+            "user\nProblem: Let $k$ be a real number such that the system\n$|25 + 20i - z| = 5$\n$|z - 4 - k| = |z - 3i - k|$\nhas exactly one complex solution $z$. The sum of all possible values of $k$ can be written as $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m + n$. Here $i = \\sqrt{-1}$.\nMark your solution with \\boxed\nAnswer:\nassistant\n<think></think>\n\nWe are given a system of equations involving complex numbers:\n\n1. $ |25 + 20i - z| = 5 $\n2. $ |z - 4 - k| = |z - 3i - k| $\n\nWe are to find all real values of $ k $ for which the system has **exactly one complex solution** $ z $, and then compute the **sum of all such values of $ k $** in the form $ \\frac{m}{n} $, and find $ m + n $.\n\n---\n\n### Step 1: Interpret the first equation geometrically\n\n"
+          ],
+          "model_answers": [
+            ""
+          ]
+        },
+        {
+          "id": "I-9",
+          "problem": "The parabola with equation $y = x^2 - 4$ is rotated $60°$ counterclockwise around the origin. The unique point in the fourth quadrant where the original parabola and its image intersect has $y$-coordinate $\\frac{a-\\sqrt{b}}{c}$, where $a$, $b$, and $c$ are positive integers, and $a$ and $c$ are relatively prime. Find $a + b + c$.",
+          "solution": "",
+          "answer": "62",
+          "url": "",
+          "model_outputs": [
+            "user\nProblem: The parabola with equation $y = x^2 - 4$ is rotated $60°$ counterclockwise around the origin. The unique point in the fourth quadrant where the original parabola and its image intersect has $y$-coordinate $\\frac{a-\\sqrt{b}}{c}$, where $a$, $b$, and $c$ are positive integers, and $a$ and $c$ are relatively prime. Find $a + b + c$.\nMark your solution with \\boxed\nAnswer:\nassistant\n<think></think>\n\nWe are given the parabola $ y = x^2 - 4 $, which is rotated $ 60^\\circ $ counterclockwise around the origin. We are to find the unique point of intersection in the **fourth quadrant** between the original parabola and its rotated image, and then determine the value of $ a + b + c $ given that the $ y $-coordinate of the point is of the form $ \\frac{a - \\sqrt{b}}{c} $, where $ a $, $ b $, and $ c $ are positive integers, and $ a"
+          ],
+          "model_answers": [
+            ""
+          ]
+        },
+        {
+          "id": "I-10",
+          "problem": "The 27 cells of a $3 \\times 9$ grid are filled in using the numbers 1 through 9 so that each row contains 9 different numbers, and each of the three $3 \\times 3$ blocks heavily outlined in the example contains 9 different numbers, as in the first three rows of a Sudoku puzzle. The number of different ways to fill such a grid can be written as $p^a \\cdot q^b \\cdot r^c \\cdot s^d$, where $p,q,r,$ and $s$ are distinct prime numbers and $a$, $b$, $c$, and $d$ are positive integers. Find $p \\cdot a + q \\cdot b + r \\cdot c + s \\cdot d$.",
+          "solution": "",
+          "answer": "81",
+          "url": "",
+          "model_outputs": [
+            " can be written as $p^a \\cdot q^b \\cdot r^c \\cdot s^d$, where $p,q,r,$ and $s$ are distinct prime numbers and $a$, $b$, $c$, and $d$ are positive integers. Find $p \\cdot a + q \\cdot b + r \\cdot c + s \\cdot d$.\nMark your solution with \\boxed\nAnswer:\nassistant\n<think></think>\n\nWe are given a $3 \\times 9$ grid, where each row contains the numbers 1 through 9, with no repetition, and the grid is divided into **three $3 \\times 3$ blocks**, each of which must also contain the numbers 1 through 9 with no repetition.\n\nSo, the grid has the following structure:\n\n```\n|---|---|---|---|---|---|---|---|---|\n|   |   |   |   |   |   |   |   |   |\n|   |   |   |   |   |   |   |"
+          ],
+          "model_answers": [
+            ""
+          ]
+        },
+        {
+          "id": "I-11",
+          "problem": "A piecewise linear periodic function is defined by\n$f(x)=\\begin{cases} x & \\text{if } x \\in [-1,1) \\\\ 2-x & \\text{if } x \\in [1,3) \\end{cases}$\nand $f(x+4)=f(x)$ for all real numbers $x$. The parabola $x=34y^2$ intersects the graph of $f(x)$ at finitely many points. The sum of the $y$-coordinates of these intersection points can be expressed in the form $\\frac{a+b\\sqrt{c}}{d}$, where $a$, $b$, $c$, and $d$ are positive integers, $a$, $b$, and $d$ have greatest common divisor equal to 1, and $c$ is not divisible by the square of any prime. Find $a + b + c + d$.",
+          "solution": "",
+          "answer": "259",
+          "url": "",
+          "model_outputs": [
+            "$, $b$, and $d$ have greatest common divisor equal to 1, and $c$ is not divisible by the square of any prime. Find $a + b + c + d$.\nMark your solution with \\boxed\nAnswer:\nassistant\n<think></think>\n\nWe are given a **piecewise linear periodic function**:\n\n$$\nf(x) = \n\\begin{cases}\nx & \\text{if } x \\in [-1,1) \\\\\n2 - x & \\text{if } x \\in [1,3)\n\\end{cases}\n$$\nand the function is **periodic** with period 4, i.e., $ f(x + 4) = f(x) $ for all $ x $.\n\nWe are also given the **parabola** $ x = 34y^2 $, and we are to find the **points"
+          ],
+          "model_answers": [
+            ""
+          ]
+        },
+        {
+          "id": "I-12",
+          "problem": "The set of points in 3-dimensional coordinate space that lie in the plane $x + y + z = 75$ whose coordinates satisfy the inequalities\n$x - yz < y - zx < z - xy$\nforms three disjoint convex regions. Exactly one of those regions has finite area. The area of this finite region can be expressed in the form $a\\sqrt{b}$, where $a$ and $b$ are positive integers and $b$ is not divisible by the square of any prime. Find $a + b$.",
+          "solution": "",
+          "answer": "510",
+          "url": "",
+          "model_outputs": [
+            "user\nProblem: The set of points in 3-dimensional coordinate space that lie in the plane $x + y + z = 75$ whose coordinates satisfy the inequalities\n$x - yz < y - zx < z - xy$\nforms three disjoint convex regions. Exactly one of those regions has finite area. The area of this finite region can be expressed in the form $a\\sqrt{b}$, where $a$ and $b$ are positive integers and $b$ is not divisible by the square of any prime. Find $a + b$.\nMark your solution with \\boxed\nAnswer:\nassistant\n<think></think>\n\nWe are given the plane:\n\n$$\nx + y + z = 75\n$$\n\nand the inequalities:\n\n$$\nx - yz < y - zx < z - xy\n$$\n\nWe are to find the **area** of the **finite region** among the three disjoint convex regions formed by these inequalities on the plane, and express it in the form $ a\\sqrt{b} $, where $ b $ is square-free. Then compute $ a + b $.\n\n---\n\n### Step 1: Understand the Geometry\n\nThe plane $ x + y + z = 75 $ is a flat "
+          ],
+          "model_answers": [
+            ""
+          ]
+        },
+        {
+          "id": "I-13",
+          "problem": "Alex divides a disk into four quadrants with two perpendicular diameters intersecting at the center of the disk. He draws 25 more line segments through the disk, drawing each segment by selecting two points at random on the perimeter of the disk in different quadrants and connecting those two points. Find the expected number of regions into which these 27 line segments divide the disk.",
+          "solution": "",
+          "answer": "204",
+          "url": "",
+          "model_outputs": [
+            "user\nProblem: Alex divides a disk into four quadrants with two perpendicular diameters intersecting at the center of the disk. He draws 25 more line segments through the disk, drawing each segment by selecting two points at random on the perimeter of the disk in different quadrants and connecting those two points. Find the expected number of regions into which these 27 line segments divide the disk.\nMark your solution with \\boxed\nAnswer:\nassistant\n<think></think>\n\nWe are given a disk divided into four quadrants by two perpendicular diameters. Then, **25 more line segments** are drawn by choosing two random points on the perimeter of the disk in **different quadrants**, and connecting them. So, in total, there are **27 line segments**.\n\nWe are to find the **expected number of regions** these 27 line segments divide the disk into.\n\n---\n\n### Step 1: Understanding the setup\n\nWe have:\n\n- A **disk** divided into **4 quadrants** by two perpendicular diameters.\n- **27 line segments** are drawn, each connecting"
+          ],
+          "model_answers": [
+            ""
+          ]
+        },
+        {
+          "id": "I-14",
+          "problem": "Let $ABCDE$ be a convex pentagon with $AB = 14$, $BC = 7$, $CD = 24$, $DE = 13$, $EA = 26$, and $\\angle ZBA = 60°$. For each point $X$ in the plane, define $f(X) = AX + BX + CX + DX + EX$. The least possible value of $f(X)$ can be expressed as $m + n\\sqrt{p}$, where $m$ and $n$ are positive integers and $p$ is not divisible by the square of any prime. Find $m + n + p$.",
+          "solution": "",
+          "answer": "60",
+          "url": "",
+          "model_outputs": [
+            " $EA = 26$, and $\\angle ZBA = 60°$. For each point $X$ in the plane, define $f(X) = AX + BX + CX + DX + EX$. The least possible value of $f(X)$ can be expressed as $m + n\\sqrt{p}$, where $m$ and $n$ are positive integers and $p$ is not divisible by the square of any prime. Find $m + n + p$.\nMark your solution with \\boxed\nAnswer:\nassistant\n<think></think>\n\nWe are given a convex pentagon $ ABCDE $ with side lengths:\n\n- $ AB = 14 $\n- $ BC = 7 $\n- $ CD = 24 $\n- $ DE = 13 $\n- $ EA = 26 $\n\nAlso, we are told that $ \\angle ZBA = 60^\\circ $, where $ Z $ is a point (not specified, but perhaps it's a typo or mislabeling). However, since the problem involves minimizing $ f(X) = AX + BX + CX + DX + EX $, and we're to find the **minimum possible"
+          ],
+          "model_answers": [
+            ""
+          ]
+        },
+        {
+          "id": "I-15",
+          "problem": "Let $N$ denote the number of ordered triples of positive integers $(a,b,c)$ such that $a,b,c \\leq 3^6$ and $a^3 + b^3 + c^3$ is a multiple of $3^7$. Find the remainder when $N$ is divided by 1000.",
+          "solution": "",
+          "answer": "735",
+          "url": "",
+          "model_outputs": [
+            "user\nProblem: Let $N$ denote the number of ordered triples of positive integers $(a,b,c)$ such that $a,b,c \\leq 3^6$ and $a^3 + b^3 + c^3$ is a multiple of $3^7$. Find the remainder when $N$ is divided by 1000.\nMark your solution with \\boxed\nAnswer:\nassistant\n<think></think>\n\nWe are given a problem where we must find the number of ordered triples $(a, b, c)$ of positive integers such that:\n\n- $a, b, c \\leq 3^6 = 729$\n- $a^3 + b^3 + c^3$ is divisible by $3^7 = 2187$\n- Then, find the remainder when this number $N$ is divided by 1000.\n\n---\n\n### Step 1: Understanding the Constraint\n\nWe are given that $a^3 + b^3 + c^3 \\equiv 0 \\"
+          ],
+          "model_answers": [
+            ""
+          ]
+        },
+        {
+          "id": "II-1",
+          "problem": "Six points $A, B, C, D, E,$ and $F$ lie in a straight line in that order. Suppose that $G$ is a point not on the line and that $AC=26, BD=22, CE=31, DF=33, AF=73, CG=40,$ and $DG=30.$ Find the area of $\\triangle BGE.$",
+          "solution": "",
+          "answer": "468",
+          "url": "",
+          "model_outputs": [
+            "user\nProblem: Six points $A, B, C, D, E,$ and $F$ lie in a straight line in that order. Suppose that $G$ is a point not on the line and that $AC=26, BD=22, CE=31, DF=33, AF=73, CG=40,$ and $DG=30.$ Find the area of $\\triangle BGE.$\nMark your solution with \\boxed\nAnswer:\nassistant\n<think></think>\n\nWe are given six points $ A, B, C, D, E, F $ lying in a straight line in that order. A point $ G $ is not on the line, and we are given several distances:\n\n- $ AC = 26 $\n- $ BD = 22 $\n- $ CE = 31 $\n- $ DF = 33 $\n- $ AF = 73 $\n- $ CG = 40 $\n- $ DG = 30 $\n\nWe are to find the **area of triangle $ \\triangle BGE $**.\n\n---\n\n### Step 1: Assign Coordinates\n\n"
+          ],
+          "model_answers": [
+            ""
+          ]
+        },
+        {
+          "id": "II-2",
+          "problem": "Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9)$.",
+          "solution": "",
+          "answer": "49",
+          "url": "",
+          "model_outputs": [
+            "user\nProblem: Find the sum of all positive integers $n$ such that $n+2$ divides the product $3(n+3)(n^2+9)$.\nMark your solution with \\boxed\nAnswer:\nassistant\n<think></think>\n\nWe are given that $ n + 2 $ divides the product $ 3(n+3)(n^2+9) $, and we are to find the **sum of all positive integers $ n $** for which this divisibility condition holds.\n\n---\n\n### Step 1: Understanding the Problem\n\nWe are given:\n$$\nn + 2 \\mid 3(n+3)(n^2 + 9)\n$$\nThis means that $ n + 2 $ must divide the expression $ 3(n+3)(n^2 + 9) $.\n\nLet’s denote:\n$$\nf(n)"
+          ],
+          "model_answers": [
+            ""
+          ]
+        },
+        {
+          "id": "II-3",
+          "problem": "Four unit squares form a $2 \\times 2$ grid. Each of the $12$ unit line segments forming the sides of the squares is colored either red or blue in such way that each square has $2$ red sides and blue sides. One example is shown below (red is solid, blue is dashed). Find the number of such colorings.",
+          "solution": "",
+          "answer": "82",
+          "url": "",
+          "model_outputs": [
+            "user\nProblem: Four unit squares form a $2 \\times 2$ grid. Each of the $12$ unit line segments forming the sides of the squares is colored either red or blue in such way that each square has $2$ red sides and blue sides. One example is shown below (red is solid, blue is dashed). Find the number of such colorings.\nMark your solution with \\boxed\nAnswer:\nassistant\n<think></think>\n\nWe are given a $2 \\times 2$ grid of unit squares, which consists of $4$ unit squares. The total number of unit line segments in the grid is $12$, and each of these segments is colored either red or blue. The condition is that **each square has exactly 2 red sides and 2 blue sides**.\n\n---\n\n### Step 1: Understand the Structure\n\nA $2 \\times 2$ grid of squares consists of:\n\n- **4 unit squares** (the cells of the grid),\n- **12 unit line segments** (each square has 4 sides, but adjacent"
+          ],
+          "model_answers": [
+            ""
+          ]
+        },
+        {
+          "id": "II-4",
+          "problem": "The product \\[\\prod^{63}_{k=4} \\frac{\\log_k (5^{k^2 - 1})}{\\log_{k + 1} (5^{k^2 - 4})} = \\frac{\\log_4 (5^{15})}{\\log_5 (5^{12})} \\cdot \\frac{\\log_5 (5^{24})}{\\log_6 (5^{21})}\\cdot \\frac{\\log_6 (5^{35})}{\\log_7 (5^{32})} \\cdots \\frac{\\log_{63} (5^{3968})}{\\log_{64} (5^{3965})}\\]is equal to $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m + n.$",
+          "solution": "",
+          "answer": "106",
+          "url": "",
+          "model_outputs": [
+            "log_{64} (5^{3965})}\\]is equal to $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m + n.$\nMark your solution with \\boxed\nAnswer:\nassistant\n<think></think>\n\nWe are given a product:\n\n$$\n\\prod_{k=4}^{63} \\frac{\\log_k (5^{k^2 - 1})}{\\log_{k+1} (5^{k^2 - 4})}\n$$\n\nand told that this is equal to:\n\n$$\n\\frac{\\log_4 (5^{15})}{\\log_5 (5^{12})} \\cdot \\frac{\\log_5 (5^{24})}{\\log_6 (5^{21})} \\cdot \\frac{\\log_6 (5^{35"
+          ],
+          "model_answers": [
+            ""
+          ]
+        },
+        {
+          "id": "II-5",
+          "problem": "Suppose $\\triangle ABC$ has angles $\\angle BAC = 84^\\circ, \\angle ABC=60^\\circ,$ and $\\angle ACB = 36^\\circ.$ Let $D, E,$ and $F$ be the midpoints of sides $\\overline{BC}, \\overline{AC},$ and $\\overline{AB},$ respectively. The circumcircle of $\\triangle DEF$ intersects $\\overline{BD}, \\overline{AE},$ and $\\overline{AF}$ at points $G, H,$ and $J,$ respectively. The points $G, D, E, H, J,$ and $F$ divide the circumcircle of $\\triangle DEF$ into six minor arcs, as shown. Find $\\overarc{DE}+2\\cdot \\overarc{HJ} + 3\\cdot \\overarc{FG},$ where the arcs are measured in degrees.",
+          "solution": "",
+          "answer": "336",
+          "url": "",
+          "model_outputs": [
+            "$ into six minor arcs, as shown. Find $\\overarc{DE}+2\\cdot \\overarc{HJ} + 3\\cdot \\overarc{FG},$ where the arcs are measured in degrees.\nMark your solution with \\boxed\nAnswer:\nassistant\n<think></think>\n\nWe are given triangle $ \\triangle ABC $ with angles:\n\n- $ \\angle BAC = 84^\\circ $\n- $ \\angle ABC = 60^\\circ $\n- $ \\angle ACB = 36^\\circ $\n\nLet $ D, E, F $ be the midpoints of $ BC, AC, AB $ respectively.\n\nWe are to find the value of:\n\n$$\n\\overarc{DE} + 2 \\cdot \\overarc{HJ} + 3 \\cdot \\overarc{FG}\n$$\n\nWhere the arcs are on the circumcircle of $ \\triangle DEF $"
+          ],
+          "model_answers": [
+            ""
+          ]
+        },
+        {
+          "id": "II-6",
+          "problem": "Circle $\\omega_1$ with radius $6$ centered at point $A$ is internally tangent at point $B$ to circle $\\omega_2$ with radius $15$. Points $C$ and $D$ lie on $\\omega_2$ such that $\\overline{BC}$ is a diameter of $\\omega_2$ and $\\overline{BC} \\perp \\overline{AD}$. The rectangle $EFGH$ is inscribed in $\\omega_1$ such that $\\overline{EF} \\perp \\overline{BC}$, $C$ is closer to $\\overline{GH}$ than to $\\overline{EF}$, and $D$ is closer to $\\overline{FG}$ than to $\\overline{EH}$, as shown. Triangles $\\triangle DCF$ and $\\triangle CHG$ have equal areas. The area of rectangle $EFGH$ is $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.",
+          "solution": "",
+          "answer": "293",
+          "url": "",
+          "model_outputs": [
+            "$ and $n$ are relatively prime positive integers. Find $m+n$.\nMark your solution with \\boxed\nAnswer:\nassistant\n<think></think>\n\nWe are given a geometric configuration involving two circles and a rectangle inscribed in one of them. We are to find the area of the rectangle $EFGH$, which is inscribed in the smaller circle $\\omega_1$ (radius 6), and given certain geometric constraints.\n\n---\n\n### Step 1: Understand the Setup\n\n- **Circle $\\omega_1$** has radius 6 and is centered at point $A$.\n- **Circle $\\omega_2$** has radius 15 and is centered at point $B$, and it is **internally tangent** to $\\omega_1$ at point"
+          ],
+          "model_answers": [
+            ""
+          ]
+        },
+        {
+          "id": "II-7",
+          "problem": "Let $A$ be the set of positive integer divisors of $2025$. Let $B$ be a randomly selected subset of $A$. The probability that $B$ is a nonempty set with the property that the least common multiple of its element is $2025$ is $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.",
+          "solution": "",
+          "answer": "237",
+          "url": "",
+          "model_outputs": [
+            "user\nProblem: Let $A$ be the set of positive integer divisors of $2025$. Let $B$ be a randomly selected subset of $A$. The probability that $B$ is a nonempty set with the property that the least common multiple of its element is $2025$ is $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.\nMark your solution with \\boxed\nAnswer:\nassistant\n<think></think>\n\nWe are given:\n\n- $ A $ is the set of **positive integer divisors** of $ 2025 $.\n- $ B $ is a **randomly selected subset** of $ A $.\n- We are to find the probability that $ B $ is a **nonempty** subset such that the **least common multiple** (LCM) of its elements is exactly $ 2025 $.\n- The answer is to be expressed as $ \\frac{m}{n} $ in lowest terms, and we are to find $ m + n $.\n\n---\n\n### Step 1: Prime Factor"
+          ],
+          "model_answers": [
+            ""
+          ]
+        },
+        {
+          "id": "II-8",
+          "problem": "From an unlimited supply of 1-cent coins, 10-cent coins, and 25-cent coins, Silas wants to find a collection of coins that has a total value of $N$ cents, where $N$ is a positive integer. He uses the so-called greedy algorithm, successively choosing the coin of greatest value that does not cause the value of his collection to exceed $N.$ For example, to get 42 cents, Silas will choose a 25-cent coin, then a 10-cent coin, then 7 1-cent coins. However, this collection of 9 coins uses more coins than necessary to get a total of 42 cents; indeed, choosing 4 10-cent coins and 2 1-cent coins achieves the same total value with only 6 coins. In general, the greedy algorithm succeeds for a given $N$ if no other collection of 1-cent, 10-cent, and 25-cent coins gives a total value of $N$ cents using strictly fewer coins than the collection given by the greedy algorithm. Find the number of values of $N$ between $1$ and $1000$ inclusive for which the greedy algorithm succeeds.",
+          "solution": "",
+          "answer": "610",
+          "url": "",
+          "model_outputs": [
+            "<think></think>\n\nWe are given a problem involving coin denominations of 1, 10, and 25 cents. Silas uses the **greedy algorithm** to make change for a given amount $ N $, always choosing the largest coin (in value) that does not exceed the remaining amount. We are to count the number of values of $ N $ from 1 to 1000 inclusive for which the greedy algorithm **succeeds**, meaning that **no other collection of coins** (using 1, 10, and 25-cent coins) can make the total value $ N $ using **"
+          ],
+          "model_answers": [
+            ""
+          ]
+        },
+        {
+          "id": "II-9",
+          "problem": "There are $n$ values of $x$ in the interval $0<x<2\\pi$ where $f(x)=\\sin(7\\pi\\cdot\\sin(5x))=0$. For $t$ of these $n$ values of $x$, the graph of $y=f(x)$ is tangent to the $x$-axis. Find $n+t$.",
+          "solution": "",
+          "answer": "149",
+          "url": "",
+          "model_outputs": [
+            "user\nProblem: There are $n$ values of $x$ in the interval $0<x<2\\pi$ where $f(x)=\\sin(7\\pi\\cdot\\sin(5x))=0$. For $t$ of these $n$ values of $x$, the graph of $y=f(x)$ is tangent to the $x$-axis. Find $n+t$.\nMark your solution with \\boxed\nAnswer:\nassistant\n<think></think>\n\nWe are given the function:\n\n$$\nf(x) = \\sin(7\\pi \\cdot \\sin(5x))\n$$\n\nWe are to find the number of values of $ x $ in the interval $ 0 < x < 2\\pi $ for which $ f(x) = 0 $, and among these values, how many of them are **points of tangency** (i.e., where the graph of $ f(x) $ is tangent to the $ x $-axis). Then we are to find $ n + t $, where $ n $ is the total number of roots and $"
+          ],
+          "model_answers": [
+            ""
+          ]
+        },
+        {
+          "id": "II-10",
+          "problem": "Sixteen chairs are arranged in a row. Eight people each select a chair in which to sit so that no person sits next to two other people. Let $N$ be the number of subsets of $16$ chairs that could be selected. Find the remainder when $N$ is divided by $1000$.",
+          "solution": "",
+          "answer": "907",
+          "url": "",
+          "model_outputs": [
+            "user\nProblem: Sixteen chairs are arranged in a row. Eight people each select a chair in which to sit so that no person sits next to two other people. Let $N$ be the number of subsets of $16$ chairs that could be selected. Find the remainder when $N$ is divided by $1000$.\nMark your solution with \\boxed\nAnswer:\nassistant\n<think></think>\n\nWe are given a row of 16 chairs, and we need to find the number of subsets of 8 chairs that can be selected such that **no two selected chairs are adjacent**. Then, we are to find the remainder when this number is divided by 1000.\n\n---\n\n### Step 1: Understanding the Problem\n\nWe are to choose **8 chairs out of 16**, such that **no two are adjacent**. This is a classic **combinatorics problem** involving **non-adjacent selections**.\n\nLet’s denote the positions of the chairs as $ 1, 2,"
+          ],
+          "model_answers": [
+            ""
+          ]
+        },
+        {
+          "id": "II-11",
+          "problem": "Let $S$ be the set of vertices of a regular $24$-gon. Find the number of ways to draw $12$ segments of equal lengths so that each vertex in $S$ is an endpoint of exactly one of the $12$ segments.",
+          "solution": "",
+          "answer": "113",
+          "url": "",
+          "model_outputs": [
+            "user\nProblem: Let $S$ be the set of vertices of a regular $24$-gon. Find the number of ways to draw $12$ segments of equal lengths so that each vertex in $S$ is an endpoint of exactly one of the $12$ segments.\nMark your solution with \\boxed\nAnswer:\nassistant\n<think></think>\n\nWe are given a regular 24-gon with vertex set $ S $, and we are to find the number of ways to draw **12 segments of equal length** such that **each vertex is an endpoint of exactly one segment**.\n\n---\n\n### Step 1: Understanding the Problem\n\n- A regular 24-gon has 24 vertices.\n- We are to draw **12 segments** such that:\n  - Each segment connects **two vertices**.\n  - Each vertex is used in **exactly one segment** (i.e., the segments form a perfect matching).\n  - All 12"
+          ],
+          "model_answers": [
+            ""
+          ]
+        },
+        {
+          "id": "II-12",
+          "problem": "Let $A_1A_2\\dots A_{11}$ be a non-convex $11$-gon such that \n- The area of $A_iA_1A_{i+1}$ is $1$ for each $2 \\le i \\le 10$, \n- $\\cos(\\angle A_iA_1A_{i+1})=\\frac{12}{13}$ for each $2 \\le i \\le 10$, \n- The perimeter of $A_1A_2\\dots A_{11}$ is $20$. \nIf $A_1A_2+A_1A_{11}$ can be expressed as $\\frac{m\\sqrt{n}-p}{q}$ for positive integers $m,n,p,q$ with $n$ squarefree and $\\gcd(m,p,q)=1$, find $m+n+p+q$.",
+          "solution": "",
+          "answer": "19",
+          "url": "",
+          "model_outputs": [
+            " expressed as $\\frac{m\\sqrt{n}-p}{q}$ for positive integers $m,n,p,q$ with $n$ squarefree and $\\gcd(m,p,q)=1$, find $m+n+p+q$.\nMark your solution with \\boxed\nAnswer:\nassistant\n<think></think>\n\nWe are given a non-convex $ 11 $-gon $ A_1A_2\\dots A_{11} $ with the following properties:\n\n- For each $ 2 \\le i \\le 10 $, the **area** of triangle $ \\triangle A_iA_1A_{i+1} $ is **1**.\n- For each $ 2 \\le i \\le 10 $, the **cosine of the angle** $ \\angle A_iA_1A_{i+1} $ is $ \\frac{12}{13}"
+          ],
+          "model_answers": [
+            ""
+          ]
+        },
+        {
+          "id": "II-13",
+          "problem": "Let the sequence of rationals $x_1,x_2,\\dots$ be defined such that $x_1=\\frac{25}{11}$ and \\[x_{k+1}=\\frac{1}{3}\\left(x_k+\\frac{1}{x_k}-1\\right).\\]$x_{2025}$ can be expressed as $\\frac{m}{n}$ for relatively prime positive integers $m$ and $n$. Find the remainder when $m+n$ is divided by $1000$.",
+          "solution": "",
+          "answer": "248",
+          "url": "",
+          "model_outputs": [
+            "user\nProblem: Let the sequence of rationals $x_1,x_2,\\dots$ be defined such that $x_1=\\frac{25}{11}$ and \\[x_{k+1}=\\frac{1}{3}\\left(x_k+\\frac{1}{x_k}-1\\right).\\]$x_{2025}$ can be expressed as $\\frac{m}{n}$ for relatively prime positive integers $m$ and $n$. Find the remainder when $m+n$ is divided by $1000$.\nMark your solution with \\boxed\nAnswer:\nassistant\n<think></think>\n\nWe are given a recursive sequence defined by:\n\n- $ x_1 = \\frac{25}{11} $\n- $ x_{k+1} = \\frac{1}{3} \\left( x_k + \\frac{1}{x_k} - 1 \\right) $\n\nWe are to find $ x_{2025} $, express it as a reduced fraction $ \\frac{m}{n} $, and compute $ m+n \\mod 1000 $.\n\n---\n\n### Step 1: Understanding the recurrence\n\nWe define the recurrence:\n$$\nx_{k+"
+          ],
+          "model_answers": [
+            ""
+          ]
+        },
+        {
+          "id": "II-14",
+          "problem": "Let ${\\triangle ABC}$ be a right triangle with $\\angle A = 90^\\circ$ and $BC = 38.$ There exist points $K$ and $L$ inside the triangle such \\[AK = AL = BK = CL = KL = 14.\\]The area of the quadrilateral $BKLC$ can be expressed as $n\\sqrt3$ for some positive integer $n.$ Find $n.$",
+          "solution": "",
+          "answer": "104",
+          "url": "",
+          "model_outputs": [
+            "user\nProblem: Let ${\\triangle ABC}$ be a right triangle with $\\angle A = 90^\\circ$ and $BC = 38.$ There exist points $K$ and $L$ inside the triangle such \\[AK = AL = BK = CL = KL = 14.\\]The area of the quadrilateral $BKLC$ can be expressed as $n\\sqrt3$ for some positive integer $n.$ Find $n.$\nMark your solution with \\boxed\nAnswer:\nassistant\n<think></think>\n\nWe are given a right triangle $ \\triangle ABC $ with $ \\angle A = 90^\\circ $, and the hypotenuse $ BC = 38 $. There are points $ K $ and $ L $ inside the triangle such that:\n\n$$\nAK = AL = BK = CL = KL = 14\n$$\n\nWe are to find the area of quadrilateral $ BKLC $, which is expressed as $ n\\sqrt{3} $, and determine the integer $ n $.\n\n---\n\n### Step 1: Coordinate Setup\n\nLet’s place the triangle in the coordinate plane for convenience.\n\nLet"
+          ],
+          "model_answers": [
+            ""
+          ]
+        },
+        {
+          "id": "II-15",
+          "problem": "Let \\[f(x)=\\frac{(x-18)(x-72)(x-98)(x-k)}{x}.\\]There exist exactly three positive real values of $k$ such that $f$ has a minimum at exactly two real values of $x$. Find the sum of these three values of $k$.",
+          "solution": "",
+          "answer": "240",
+          "url": "",
+          "model_outputs": [
+            "user\nProblem: Let \\[f(x)=\\frac{(x-18)(x-72)(x-98)(x-k)}{x}.\\]There exist exactly three positive real values of $k$ such that $f$ has a minimum at exactly two real values of $x$. Find the sum of these three values of $k$.\nMark your solution with \\boxed\nAnswer:\nassistant\n<think></think>\n\nWe are given the function:\n\n$$\nf(x) = \\frac{(x - 18)(x - 72)(x - 98)(x - k)}{x}\n$$\n\nWe are told that **there exist exactly three positive real values of $ k $** such that **$ f $ has a minimum at exactly two real values of $ x $**. We are to **find the sum of these three values of $ k $**.\n\n---\n\n### Step 1: Understanding the Function\n\nLet’s analyze the function:\n\n$$\nf(x) = \\frac{(x - 18)("
+          ],
+          "model_answers": [
+            ""
+          ]
+        }
+      ],
+      "num_total": 30,
+      "solved_avg": 0.0,
+      "run_stats": [
+        {
+          "repetition": 1,
+          "num_total": 30,
+          "num_solved": 0,
+          "accuracy": 0.0
+        }
+      ],
+      "accuracy_avg": 0.0,
+      "accuracy_std_err": 0.0,
+      "num_repeat": 1
+    }
+  },
+  "config": {
+    "model": "hf",
+    "model_args": "pretrained=Qwen/Qwen3-8B,trust_remote_code=True",
+    "tasks": "AIME25",
+    "batch_sizes": [
+      256
+    ],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "annotator_model": "auto",
+    "gen_kwargs": null,
+    "random_seed": 0,
+    "numpy_seed": 1234,
+    "torch_seed": 1234,
+    "fewshot_seed": 1234,
+    "model_num_parameters": 8190735360,
+    "model_dtype": "torch.bfloat16",
+    "model_revision": "main",
+    "model_sha": "2069b3fae1114555f3c020c81410e51fa0f656f2"
+  },
+  "git_hash": "5f822fc",
+  "date": 1747180209.8243268,
+  "pretty_env_info": "'NoneType' object has no attribute 'splitlines'",
+  "transformers_version": "4.51.3",
+  "lm_eval_version": "0.4.8",
+  "upper_git_hash": null,
+  "tokenizer_pad_token": [
+    "<|endoftext|>",
+    "151643"
+  ],
+  "tokenizer_eos_token": [
+    "<|im_end|>",
+    "151645"
+  ],
+  "tokenizer_bos_token": [
+    null,
+    "None"
+  ],
+  "eot_token_id": 151645,
+  "max_length": 40960,
+  "task_hashes": {},
+  "model_source": "hf",
+  "model_name": "Qwen/Qwen3-8B",
+  "model_name_sanitized": "Qwen__Qwen3-8B",
+  "system_instruction": null,
+  "system_instruction_sha": null,
+  "fewshot_as_multiturn": false,
+  "chat_template": "{%- if tools %}\n    {{- '<|im_start|>system\\n' }}\n    {%- if messages[0].role == 'system' %}\n        {{- messages[0].content + '\\n\\n' }}\n    {%- endif %}\n    {{- \"# Tools\\n\\nYou may call one or more functions to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\\n\\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}\\n</tool_call><|im_end|>\\n\" }}\n{%- else %}\n    {%- if messages[0].role == 'system' %}\n        {{- '<|im_start|>system\\n' + messages[0].content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}\n{%- for message in messages[::-1] %}\n    {%- set index = (messages|length - 1) - loop.index0 %}\n    {%- if ns.multi_step_tool and message.role == \"user\" and not(message.content.startswith('<tool_response>') and message.content.endswith('</tool_response>')) %}\n        {%- set ns.multi_step_tool = false %}\n        {%- set ns.last_query_index = index %}\n    {%- endif %}\n{%- endfor %}\n{%- for message in messages %}\n    {%- if (message.role == \"user\") or (message.role == \"system\" and not loop.first) %}\n        {{- '<|im_start|>' + message.role + '\\n' + message.content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {%- set content = message.content %}\n        {%- set reasoning_content = '' %}\n        {%- if message.reasoning_content is defined and message.reasoning_content is not none %}\n            {%- set reasoning_content = message.reasoning_content %}\n        {%- else %}\n            {%- if '</think>' in message.content %}\n                {%- set content = message.content.split('</think>')[-1].lstrip('\\n') %}\n                {%- set reasoning_content = message.content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}\n            {%- endif %}\n        {%- endif %}\n        {%- if loop.index0 > ns.last_query_index %}\n            {%- if loop.last or (not loop.last and reasoning_content) %}\n                {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content.strip('\\n') + '\\n</think>\\n\\n' + content.lstrip('\\n') }}\n            {%- else %}\n                {{- '<|im_start|>' + message.role + '\\n' + content }}\n            {%- endif %}\n        {%- else %}\n            {{- '<|im_start|>' + message.role + '\\n' + content }}\n        {%- endif %}\n        {%- if message.tool_calls %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if (loop.first and content) or (not loop.first) %}\n                    {{- '\\n' }}\n                {%- endif %}\n                {%- if tool_call.function %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {{- '<tool_call>\\n{\"name\": \"' }}\n                {{- tool_call.name }}\n                {{- '\", \"arguments\": ' }}\n                {%- if tool_call.arguments is string %}\n                    {{- tool_call.arguments }}\n                {%- else %}\n                    {{- tool_call.arguments | tojson }}\n                {%- endif %}\n                {{- '}\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.first or (messages[loop.index0 - 1].role != \"tool\") %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- message.content }}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != \"tool\") %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n    {%- if enable_thinking is defined and enable_thinking is false %}\n        {{- '<think>\\n\\n</think>\\n\\n' }}\n    {%- endif %}\n{%- endif %}",
+  "chat_template_sha": "87a2728cb8dc9fe424d624542f6060ec05a1d285ebbec578bb078900e33396b5",
+  "start_time": 422688.089166099,
+  "end_time": 422719.914060464,
+  "total_evaluation_time_seconds": "31.824894365039654"
+}
