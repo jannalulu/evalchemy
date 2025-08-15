@@ -1,0 +1,1167 @@
+{
+  "results": {
+    "longbench_2wikimqa": {
+      "alias": "longbench_2wikimqa",
+      "qa_f1_score,none": 0.15625,
+      "qa_f1_score_stderr,none": 0.12444071307827102
+    },
+    "longbench_dureader": {
+      "alias": "longbench_dureader",
+      "rouge_zh_score,none": 0.2491683397615624,
+      "rouge_zh_score_stderr,none": 0.05878708942366977
+    },
+    "longbench_gov_report": {
+      "alias": "longbench_gov_report",
+      "rouge_score,none": 0.2206550027964692,
+      "rouge_score_stderr,none": 0.011255650900181038
+    },
+    "longbench_hotpotqa": {
+      "alias": "longbench_hotpotqa",
+      "qa_f1_score,none": 0.22592592592592592,
+      "qa_f1_score_stderr,none": 0.12451748927052281
+    },
+    "longbench_lcc": {
+      "alias": "longbench_lcc",
+      "code_sim_score,none": 0.0275,
+      "code_sim_score_stderr,none": 0.018395457513822728
+    },
+    "longbench_lsht": {
+      "alias": "longbench_lsht",
+      "classification_score,none": 0.25,
+      "classification_score_stderr,none": 0.16366341767699427
+    },
+    "longbench_multi_news": {
+      "alias": "longbench_multi_news",
+      "rouge_score,none": 0.1958030845030586,
+      "rouge_score_stderr,none": 0.0181714511446412
+    },
+    "longbench_multifieldqa_en": {
+      "alias": "longbench_multifieldqa_en",
+      "qa_f1_score,none": 0.3581259118052226,
+      "qa_f1_score_stderr,none": 0.10850667946999862
+    },
+    "longbench_multifieldqa_zh": {
+      "alias": "longbench_multifieldqa_zh",
+      "qa_f1_zh_score,none": 0.28280461092961096,
+      "qa_f1_zh_score_stderr,none": 0.1159043043104704
+    },
+    "longbench_musique": {
+      "alias": "longbench_musique",
+      "qa_f1_score,none": 0.14351851851851852,
+      "qa_f1_score_stderr,none": 0.12371968261657097
+    },
+    "longbench_narrativeqa": {
+      "alias": "longbench_narrativeqa",
+      "qa_f1_score,none": 0.16409632034632032,
+      "qa_f1_score_stderr,none": 0.08133921961029218
+    },
+    "longbench_passage_count": {
+      "alias": "longbench_passage_count",
+      "count_score,none": 0.0,
+      "count_score_stderr,none": 0.0
+    },
+    "longbench_passage_retrieval_en": {
+      "alias": "longbench_passage_retrieval_en",
+      "retrieval_score,none": 0.0,
+      "retrieval_score_stderr,none": 0.0
+    },
+    "longbench_passage_retrieval_zh": {
+      "alias": "longbench_passage_retrieval_zh",
+      "retrieval_zh_score,none": 0.125,
+      "retrieval_zh_score_stderr,none": 0.125
+    },
+    "longbench_qasper": {
+      "alias": "longbench_qasper",
+      "qa_f1_score,none": 0.0,
+      "qa_f1_score_stderr,none": 0.0
+    },
+    "longbench_qmsum": {
+      "alias": "longbench_qmsum",
+      "rouge_score,none": 0.1700941281552836,
+      "rouge_score_stderr,none": 0.024400711032830133
+    },
+    "longbench_repobench-p": {
+      "alias": "longbench_repobench-p",
+      "code_sim_score,none": 0.42875,
+      "code_sim_score_stderr,none": 0.12223276244234077
+    },
+    "longbench_samsum": {
+      "alias": "longbench_samsum",
+      "rouge_score,none": 0.1708843063541361,
+      "rouge_score_stderr,none": 0.04501449256839383
+    },
+    "longbench_trec": {
+      "alias": "longbench_trec",
+      "classification_score,none": 0.0,
+      "classification_score_stderr,none": 0.0
+    },
+    "longbench_triviaqa": {
+      "alias": "longbench_triviaqa",
+      "qa_f1_score,none": 0.8303571428571429,
+      "qa_f1_score_stderr,none": 0.11607142857142856
+    },
+    "longbench_vcsum": {
+      "alias": "longbench_vcsum",
+      "rouge_zh_score,none": 0.10010767186408265,
+      "rouge_zh_score_stderr,none": 0.00488019225813769
+    }
+  },
+  "group_subtasks": {
+    "longbench_vcsum": [],
+    "longbench_triviaqa": [],
+    "longbench_trec": [],
+    "longbench_samsum": [],
+    "longbench_repobench-p": [],
+    "longbench_qmsum": [],
+    "longbench_qasper": [],
+    "longbench_passage_retrieval_zh": [],
+    "longbench_passage_retrieval_en": [],
+    "longbench_passage_count": [],
+    "longbench_narrativeqa": [],
+    "longbench_musique": [],
+    "longbench_multifieldqa_zh": [],
+    "longbench_multifieldqa_en": [],
+    "longbench_multi_news": [],
+    "longbench_lsht": [],
+    "longbench_lcc": [],
+    "longbench_hotpotqa": [],
+    "longbench_gov_report": [],
+    "longbench_dureader": [],
+    "longbench_2wikimqa": []
+  },
+  "configs": {
+    "longbench_2wikimqa": {
+      "task": "longbench_2wikimqa",
+      "tag": [
+        "longbench"
+      ],
+      "dataset_path": "THUDM/LongBench",
+      "dataset_name": "2wikimqa",
+      "test_split": "test",
+      "doc_to_text": "Answer the question based on the given passages. Only give me the answer and do not output any other words.\\n\\nThe following are given passages.\\n{{context}}\\n\\nAnswer the question based on the given passages. Only give me the answer and do not output any other words.\\n\\nQuestion: {{input}}\\nAnswer:",
+      "doc_to_target": "{{answers}}",
+      "unsafe_code": false,
+      "process_results": "def get_qa_f1_score(doc: dict, results: list[str], **kwargs):\n    output = 0.0\n    prediction = results[0].strip()\n    for ground_truth in doc[\"answers\"]:\n        score = qa_f1_score(prediction, ground_truth)\n        output = max(score, output)\n    return {\"qa_f1_score\": output}\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "qa_f1_score",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "max_gen_toks": 32,
+        "temperature": 1.0,
+        "do_sample": true,
+        "until": []
+      },
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 3.0,
+        "pretrained": "Qwen/Qwen3-Coder-30B-A3B-Instruct"
+      }
+    },
+    "longbench_dureader": {
+      "task": "longbench_dureader",
+      "tag": [
+        "longbench"
+      ],
+      "dataset_path": "THUDM/LongBench",
+      "dataset_name": "dureader",
+      "test_split": "test",
+      "doc_to_text": "请基于给定的文章回答下述问题。\\n\\n文章：{{context}}\\n\\n请基于上述文章回答下面的问题。\\n\\n问题：{{input}}\\n回答：",
+      "doc_to_target": "{{answers}}",
+      "unsafe_code": false,
+      "process_results": "def get_rouge_zh_score(doc, results, **kwargs):\n    output = 0.0\n    prediction = results[0].strip()\n    for ground_truth in doc[\"answers\"]:\n        score = rouge_zh_score(prediction, ground_truth)\n        output = max(score, output)\n    return {\"rouge_zh_score\": output}\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "rouge_zh_score",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "max_gen_toks": 128,
+        "temperature": 1.0,
+        "do_sample": true,
+        "until": []
+      },
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 3.0,
+        "pretrained": "Qwen/Qwen3-Coder-30B-A3B-Instruct"
+      }
+    },
+    "longbench_gov_report": {
+      "task": "longbench_gov_report",
+      "tag": [
+        "longbench"
+      ],
+      "dataset_path": "THUDM/LongBench",
+      "dataset_name": "gov_report",
+      "test_split": "test",
+      "doc_to_text": "You are given a report by a government agency. Write a one-page summary of the report.\\n\\nReport:\\n{{context}}\\n\\nNow, write a one-page summary of the report.\\n\\nSummary:",
+      "doc_to_target": "{{answers}}",
+      "unsafe_code": false,
+      "process_results": "def get_rouge_score(doc: dict, results: list[str], **kwargs):\n    output = 0.0\n    prediction = results[0].strip()\n    for ground_truth in doc[\"answers\"]:\n        score = rouge_score(prediction, ground_truth)\n        output = max(score, output)\n    return {\"rouge_score\": output}\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "rouge_score",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "max_gen_toks": 512,
+        "temperature": 1.0,
+        "do_sample": true,
+        "until": []
+      },
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 3.0,
+        "pretrained": "Qwen/Qwen3-Coder-30B-A3B-Instruct"
+      }
+    },
+    "longbench_hotpotqa": {
+      "task": "longbench_hotpotqa",
+      "tag": [
+        "longbench"
+      ],
+      "dataset_path": "THUDM/LongBench",
+      "dataset_name": "hotpotqa",
+      "test_split": "test",
+      "doc_to_text": "Answer the question based on the given passages. Only give me the answer and do not output any other words.\\n\\nThe following are given passages.\\n{{context}}\\n\\nAnswer the question based on the given passages. Only give me the answer and do not output any other words.\\n\\nQuestion: {{input}}\\nAnswer:",
+      "doc_to_target": "{{answers}}",
+      "unsafe_code": false,
+      "process_results": "def get_qa_f1_score(doc: dict, results: list[str], **kwargs):\n    output = 0.0\n    prediction = results[0].strip()\n    for ground_truth in doc[\"answers\"]:\n        score = qa_f1_score(prediction, ground_truth)\n        output = max(score, output)\n    return {\"qa_f1_score\": output}\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "qa_f1_score",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "max_gen_toks": 32,
+        "temperature": 1.0,
+        "do_sample": true,
+        "until": []
+      },
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 3.0,
+        "pretrained": "Qwen/Qwen3-Coder-30B-A3B-Instruct"
+      }
+    },
+    "longbench_lcc": {
+      "task": "longbench_lcc",
+      "tag": [
+        "longbench"
+      ],
+      "dataset_path": "THUDM/LongBench",
+      "dataset_name": "lcc",
+      "test_split": "test",
+      "doc_to_text": "Please complete the code given below. \\n{{context}}Next line of code:\\n",
+      "doc_to_target": "{{answers}}",
+      "unsafe_code": false,
+      "process_results": "def get_code_sim_score(doc: dict, results: list[str], **kwargs):\n    output = 0.0\n    prediction = results[0]  ## important! do not strip the prediction!\n    for ground_truth in doc[\"answers\"]:\n        score = code_sim_score(prediction, ground_truth)\n        output = max(score, output)\n    return {\"code_sim_score\": output}\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "code_sim_score",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "max_gen_toks": 64,
+        "temperature": 1.0,
+        "do_sample": true,
+        "until": []
+      },
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 3.0,
+        "pretrained": "Qwen/Qwen3-Coder-30B-A3B-Instruct"
+      }
+    },
+    "longbench_lsht": {
+      "task": "longbench_lsht",
+      "tag": [
+        "longbench"
+      ],
+      "dataset_path": "THUDM/LongBench",
+      "dataset_name": "lsht",
+      "test_split": "test",
+      "doc_to_text": "请判断给定新闻的类别，下面是一些例子。\\n\\n{{context}}\\n{{input}}",
+      "doc_to_target": "{{answers}}",
+      "unsafe_code": false,
+      "process_results": "def get_classification_score(doc: dict, results: list[str]) -> dict:\n    output = 0.0\n    prediction = results[0].strip()\n    for ground_truth in doc[\"answers\"]:\n        score = classification_score(\n            prediction, ground_truth, all_classes=doc[\"all_classes\"]\n        )\n        output = max(score, output)\n    return {\"classification_score\": output}\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "classification_score",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "max_gen_toks": 64,
+        "temperature": 1.0,
+        "do_sample": true,
+        "until": [
+          "\n"
+        ]
+      },
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 3.0,
+        "pretrained": "Qwen/Qwen3-Coder-30B-A3B-Instruct"
+      }
+    },
+    "longbench_multi_news": {
+      "task": "longbench_multi_news",
+      "tag": [
+        "longbench"
+      ],
+      "dataset_path": "THUDM/LongBench",
+      "dataset_name": "multi_news",
+      "test_split": "test",
+      "doc_to_text": "You are given several news passages. Write a one-page summary of all news. \\n\\nNews:\\n{{context}}\\n\\nNow, write a one-page summary of all the news.\\n\\nSummary:",
+      "doc_to_target": "{{answers}}",
+      "unsafe_code": false,
+      "process_results": "def get_rouge_score(doc: dict, results: list[str], **kwargs):\n    output = 0.0\n    prediction = results[0].strip()\n    for ground_truth in doc[\"answers\"]:\n        score = rouge_score(prediction, ground_truth)\n        output = max(score, output)\n    return {\"rouge_score\": output}\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "rouge_score",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "max_gen_toks": 512,
+        "temperature": 1.0,
+        "do_sample": true,
+        "until": []
+      },
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 3.0,
+        "pretrained": "Qwen/Qwen3-Coder-30B-A3B-Instruct"
+      }
+    },
+    "longbench_multifieldqa_en": {
+      "task": "longbench_multifieldqa_en",
+      "tag": [
+        "longbench"
+      ],
+      "dataset_path": "THUDM/LongBench",
+      "dataset_name": "multifieldqa_en",
+      "test_split": "test",
+      "doc_to_text": "Read the following text and answer briefly.\\n\\n{{context}}\\n\\nNow, answer the following question based on the above text, only give me the answer and do not output any other words.\\n\\nQuestion: {{input}}\\nAnswer:",
+      "doc_to_target": "{{answers}}",
+      "unsafe_code": false,
+      "process_results": "def get_qa_f1_score(doc: dict, results: list[str], **kwargs):\n    output = 0.0\n    prediction = results[0].strip()\n    for ground_truth in doc[\"answers\"]:\n        score = qa_f1_score(prediction, ground_truth)\n        output = max(score, output)\n    return {\"qa_f1_score\": output}\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "qa_f1_score",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "max_gen_toks": 64,
+        "temperature": 1.0,
+        "do_sample": true,
+        "until": []
+      },
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 3.0,
+        "pretrained": "Qwen/Qwen3-Coder-30B-A3B-Instruct"
+      }
+    },
+    "longbench_multifieldqa_zh": {
+      "task": "longbench_multifieldqa_zh",
+      "tag": [
+        "longbench"
+      ],
+      "dataset_path": "THUDM/LongBench",
+      "dataset_name": "multifieldqa_zh",
+      "test_split": "test",
+      "doc_to_text": "阅读以下文字并用中文简短回答：\\n\\n{{context}}\\n\\n现在请基于上面的文章回答下面的问题，只告诉我答案，不要输出任何其他字词。\\n\\n问题：{{input}}\\n回答：",
+      "doc_to_target": "{{answers}}",
+      "unsafe_code": false,
+      "process_results": "def get_qa_f1_zh_score(doc: dict, results: list[str], **kwargs):\n    output = 0.0\n    prediction = results[0].strip()\n    for ground_truth in doc[\"answers\"]:\n        score = qa_f1_zh_score(prediction, ground_truth)\n        output = max(score, output)\n    return {\"qa_f1_zh_score\": output}\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "qa_f1_zh_score",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "max_gen_toks": 64,
+        "temperature": 1.0,
+        "do_sample": true,
+        "until": []
+      },
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 3.0,
+        "pretrained": "Qwen/Qwen3-Coder-30B-A3B-Instruct"
+      }
+    },
+    "longbench_musique": {
+      "task": "longbench_musique",
+      "tag": [
+        "longbench"
+      ],
+      "dataset_path": "THUDM/LongBench",
+      "dataset_name": "musique",
+      "test_split": "test",
+      "doc_to_text": "Answer the question based on the given passages. Only give me the answer and do not output any other words.\\n\\nThe following are given passages.\\n{{context}}\\n\\nAnswer the question based on the given passages. Only give me the answer and do not output any other words.\\n\\nQuestion: {{input}}\\nAnswer:",
+      "doc_to_target": "{{answers}}",
+      "unsafe_code": false,
+      "process_results": "def get_qa_f1_score(doc: dict, results: list[str], **kwargs):\n    output = 0.0\n    prediction = results[0].strip()\n    for ground_truth in doc[\"answers\"]:\n        score = qa_f1_score(prediction, ground_truth)\n        output = max(score, output)\n    return {\"qa_f1_score\": output}\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "qa_f1_score",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "max_gen_toks": 32,
+        "temperature": 1.0,
+        "do_sample": true,
+        "until": []
+      },
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 3.0,
+        "pretrained": "Qwen/Qwen3-Coder-30B-A3B-Instruct"
+      }
+    },
+    "longbench_narrativeqa": {
+      "task": "longbench_narrativeqa",
+      "tag": [
+        "longbench"
+      ],
+      "dataset_path": "THUDM/LongBench",
+      "dataset_name": "narrativeqa",
+      "test_split": "test",
+      "doc_to_text": "You are given a story, which can be either a novel or a movie script, and a question. Answer the question asconcisely as you can, using a single phrase if possible. Do not provide any explanation.\\n\\nStory: {{context}}\\n\\nNow, answer the question based on the story asconcisely as you can, using a single phrase if possible. Do not provide any explanation.\\n\\nQuestion: {{input}}\\n\\nAnswer:",
+      "doc_to_target": "{{answers}}",
+      "unsafe_code": false,
+      "process_results": "def get_qa_f1_score(doc: dict, results: list[str], **kwargs):\n    output = 0.0\n    prediction = results[0].strip()\n    for ground_truth in doc[\"answers\"]:\n        score = qa_f1_score(prediction, ground_truth)\n        output = max(score, output)\n    return {\"qa_f1_score\": output}\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "qa_f1_score",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "max_gen_toks": 128,
+        "temperature": 1.0,
+        "do_sample": true,
+        "until": []
+      },
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 3.0,
+        "pretrained": "Qwen/Qwen3-Coder-30B-A3B-Instruct"
+      }
+    },
+    "longbench_passage_count": {
+      "task": "longbench_passage_count",
+      "tag": [
+        "longbench"
+      ],
+      "dataset_path": "THUDM/LongBench",
+      "dataset_name": "passage_count",
+      "test_split": "test",
+      "doc_to_text": "There are some paragraphs below sourced from Wikipedia. Some of them may be duplicates. Please carefully read these paragraphs and determine how many unique paragraphs there are after removing duplicates. In other words, how many non-repeating paragraphs are there in total?\\n\\n{{context}}\\n\\nPlease enter the final count of unique paragraphs after removing duplicates. The output format should only contain the number, such as 1, 2, 3, and so on.\\n\\nThe final answer is: ",
+      "doc_to_target": "{{answers}}",
+      "unsafe_code": false,
+      "process_results": "def get_count_score(doc: dict, results: list[str], **kwargs):\n    output = 0.0\n    prediction = results[0].strip()\n    for ground_truth in doc[\"answers\"]:\n        score = count_score(prediction, ground_truth)\n        output = max(score, output)\n    return {\"count_score\": output}\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "count_score",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "max_gen_toks": 32,
+        "temperature": 1.0,
+        "do_sample": true,
+        "until": []
+      },
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 3.0,
+        "pretrained": "Qwen/Qwen3-Coder-30B-A3B-Instruct"
+      }
+    },
+    "longbench_passage_retrieval_en": {
+      "task": "longbench_passage_retrieval_en",
+      "tag": [
+        "longbench"
+      ],
+      "dataset_path": "THUDM/LongBench",
+      "dataset_name": "passage_retrieval_en",
+      "test_split": "test",
+      "doc_to_text": "Here are 30 paragraphs from Wikipedia, along with an abstract. Please determine which paragraph the abstract is from.\\n\\n{{context}}\\n\\nThe following is an abstract.\\n\\n{{input}}\\n\\nPlease enter the number of the paragraph that the abstract is from. The answer format must be like \"Paragraph 1\", \"Paragraph 2\", etc.\\n\\nThe answer is: ",
+      "doc_to_target": "{{answers}}",
+      "unsafe_code": false,
+      "process_results": "def get_retrieval_score(doc: dict, results: list[str], **kwargs):\n    output = 0.0\n    prediction = results[0].strip()\n    for ground_truth in doc[\"answers\"]:\n        score = retrieval_score(prediction, ground_truth)\n        output = max(score, output)\n    return {\"retrieval_score\": output}\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "retrieval_score",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "max_gen_toks": 32,
+        "temperature": 1.0,
+        "do_sample": true,
+        "until": []
+      },
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 3.0,
+        "pretrained": "Qwen/Qwen3-Coder-30B-A3B-Instruct"
+      }
+    },
+    "longbench_passage_retrieval_zh": {
+      "task": "longbench_passage_retrieval_zh",
+      "tag": [
+        "longbench"
+      ],
+      "dataset_path": "THUDM/LongBench",
+      "dataset_name": "passage_retrieval_zh",
+      "test_split": "test",
+      "doc_to_text": "以下是若干段落文字，以及其中一个段落的摘要。请确定给定的摘要出自哪一段。\\n\\n{{context}}\\n\\n下面是一个摘要\\n\\n{{input}}\\n\\n请输入摘要所属段落的编号。答案格式必须是\"段落1\"，\"段落2\"等格式\\n\\n答案是：",
+      "doc_to_target": "{{answers}}",
+      "unsafe_code": false,
+      "process_results": "def get_retrieval_zh_score(doc: dict, results: list[str], **kwargs):\n    output = 0.0\n    prediction = results[0].strip()\n    for ground_truth in doc[\"answers\"]:\n        score = retrieval_zh_score(prediction, ground_truth)\n        output = max(score, output)\n    return {\"retrieval_zh_score\": output}\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "retrieval_zh_score",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "max_gen_toks": 32,
+        "temperature": 1.0,
+        "do_sample": true,
+        "until": []
+      },
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 3.0,
+        "pretrained": "Qwen/Qwen3-Coder-30B-A3B-Instruct"
+      }
+    },
+    "longbench_qasper": {
+      "task": "longbench_qasper",
+      "tag": [
+        "longbench"
+      ],
+      "dataset_path": "THUDM/LongBench",
+      "dataset_name": "qasper",
+      "test_split": "test",
+      "doc_to_text": "You are given a scientific article and a question. Answer the question as concisely as you can, using a single phrase or sentence if possible. If the question cannot be answered based on the information in the article, write \"unanswerable\". If the question is a yes/no question, answer \"yes\", \"no\", or \"unanswerable\". Do not provide any explanation.\\n\\nArticle: {{context}}\\n\\n Answer the question based on the above article as concisely as you can, using a single phrase or sentence if possible. If the question cannot be answered based on the information in the article, write \"unanswerable\". If the question is a yes/no question, answer \"yes\", \"no\", or \"unanswerable\". Do not provide any explanation.\\n\\nQuestion: {{input}}\\n\\nAnswer:",
+      "doc_to_target": "{{answers}}",
+      "unsafe_code": false,
+      "process_results": "def get_qa_f1_score(doc: dict, results: list[str], **kwargs):\n    output = 0.0\n    prediction = results[0].strip()\n    for ground_truth in doc[\"answers\"]:\n        score = qa_f1_score(prediction, ground_truth)\n        output = max(score, output)\n    return {\"qa_f1_score\": output}\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "qa_f1_score",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "max_gen_toks": 128,
+        "temperature": 1.0,
+        "do_sample": true,
+        "until": []
+      },
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 3.0,
+        "pretrained": "Qwen/Qwen3-Coder-30B-A3B-Instruct"
+      }
+    },
+    "longbench_qmsum": {
+      "task": "longbench_qmsum",
+      "tag": [
+        "longbench"
+      ],
+      "dataset_path": "THUDM/LongBench",
+      "dataset_name": "qmsum",
+      "test_split": "test",
+      "doc_to_text": "You are given a meeting transcript and a query containing a question or instruction. Answer the query in one or more sentences.\\n\\nTranscript:\\n{{context}}\\n\\nNow, answer the query based on the above meeting transcript in one or more sentences.\\n\\nQuery: {{input}}\\nAnswer:",
+      "doc_to_target": "{{answers}}",
+      "unsafe_code": false,
+      "process_results": "def get_rouge_score(doc: dict, results: list[str], **kwargs):\n    output = 0.0\n    prediction = results[0].strip()\n    for ground_truth in doc[\"answers\"]:\n        score = rouge_score(prediction, ground_truth)\n        output = max(score, output)\n    return {\"rouge_score\": output}\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "rouge_score",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "max_gen_toks": 512,
+        "temperature": 1.0,
+        "do_sample": true,
+        "until": []
+      },
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 3.0,
+        "pretrained": "Qwen/Qwen3-Coder-30B-A3B-Instruct"
+      }
+    },
+    "longbench_repobench-p": {
+      "task": "longbench_repobench-p",
+      "tag": [
+        "longbench"
+      ],
+      "dataset_path": "THUDM/LongBench",
+      "dataset_name": "repobench-p",
+      "test_split": "test",
+      "doc_to_text": "Please complete the code given below. \\n{{context}}{{input}}Next line of code:\\n",
+      "doc_to_target": "{{answers}}",
+      "unsafe_code": false,
+      "process_results": "def get_code_sim_score(doc: dict, results: list[str], **kwargs):\n    output = 0.0\n    prediction = results[0]  ## important! do not strip the prediction!\n    for ground_truth in doc[\"answers\"]:\n        score = code_sim_score(prediction, ground_truth)\n        output = max(score, output)\n    return {\"code_sim_score\": output}\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "code_sim_score",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "max_gen_toks": 64,
+        "temperature": 1.0,
+        "do_sample": true,
+        "until": []
+      },
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 3.0,
+        "pretrained": "Qwen/Qwen3-Coder-30B-A3B-Instruct"
+      }
+    },
+    "longbench_samsum": {
+      "task": "longbench_samsum",
+      "tag": [
+        "longbench"
+      ],
+      "dataset_path": "THUDM/LongBench",
+      "dataset_name": "samsum",
+      "test_split": "test",
+      "doc_to_text": "Summarize the dialogue into a few short sentences. The following are some examples.\\n\\n{{context}}\\n\\n{{input}}",
+      "doc_to_target": "{{answers}}",
+      "unsafe_code": false,
+      "process_results": "def get_rouge_score(doc: dict, results: list[str], **kwargs):\n    output = 0.0\n    prediction = results[0].strip()\n    for ground_truth in doc[\"answers\"]:\n        score = rouge_score(prediction, ground_truth)\n        output = max(score, output)\n    return {\"rouge_score\": output}\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "rouge_score",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "max_gen_toks": 128,
+        "temperature": 1.0,
+        "do_sample": true,
+        "until": [
+          "\n"
+        ]
+      },
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 3.0,
+        "pretrained": "Qwen/Qwen3-Coder-30B-A3B-Instruct"
+      }
+    },
+    "longbench_trec": {
+      "task": "longbench_trec",
+      "tag": [
+        "longbench"
+      ],
+      "dataset_path": "THUDM/LongBench",
+      "dataset_name": "trec",
+      "test_split": "test",
+      "doc_to_text": "Please determine the type of the question below. Here are some examples of questions.\\n\\n{{context}}\\n{{input}}",
+      "doc_to_target": "{{answers}}",
+      "unsafe_code": false,
+      "process_results": "def get_classification_score(doc: dict, results: list[str]) -> dict:\n    output = 0.0\n    prediction = results[0].strip()\n    for ground_truth in doc[\"answers\"]:\n        score = classification_score(\n            prediction, ground_truth, all_classes=doc[\"all_classes\"]\n        )\n        output = max(score, output)\n    return {\"classification_score\": output}\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "classification_score",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "max_gen_toks": 64,
+        "temperature": 1.0,
+        "do_sample": true,
+        "until": [
+          "\n"
+        ]
+      },
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 3.0,
+        "pretrained": "Qwen/Qwen3-Coder-30B-A3B-Instruct"
+      }
+    },
+    "longbench_triviaqa": {
+      "task": "longbench_triviaqa",
+      "tag": [
+        "longbench"
+      ],
+      "dataset_path": "THUDM/LongBench",
+      "dataset_name": "triviaqa",
+      "test_split": "test",
+      "doc_to_text": "Answer the question based on the given passage. Only give me the answer and do not output any other words. The following are some examples.\\n\\n{{context}}\\n\\n{{input}}",
+      "doc_to_target": "{{answers}}",
+      "unsafe_code": false,
+      "process_results": "def get_qa_f1_score(doc: dict, results: list[str], **kwargs):\n    output = 0.0\n    prediction = results[0].strip()\n    for ground_truth in doc[\"answers\"]:\n        score = qa_f1_score(prediction, ground_truth)\n        output = max(score, output)\n    return {\"qa_f1_score\": output}\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "qa_f1_score",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "max_gen_toks": 32,
+        "temperature": 1.0,
+        "do_sample": true,
+        "until": [
+          "\n"
+        ]
+      },
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 3.0,
+        "pretrained": "Qwen/Qwen3-Coder-30B-A3B-Instruct"
+      }
+    },
+    "longbench_vcsum": {
+      "task": "longbench_vcsum",
+      "tag": [
+        "longbench"
+      ],
+      "dataset_path": "THUDM/LongBench",
+      "dataset_name": "vcsum",
+      "test_split": "test",
+      "doc_to_text": "下面有一段会议记录，请你阅读后，写一段总结，总结会议的内容。\\n会议记录：\\n{{context}}\\n\\n会议总结：",
+      "doc_to_target": "{{answers}}",
+      "unsafe_code": false,
+      "process_results": "def get_rouge_zh_score(doc, results, **kwargs):\n    output = 0.0\n    prediction = results[0].strip()\n    for ground_truth in doc[\"answers\"]:\n        score = rouge_zh_score(prediction, ground_truth)\n        output = max(score, output)\n    return {\"rouge_zh_score\": output}\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "rouge_zh_score",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "max_gen_toks": 512,
+        "temperature": 1.0,
+        "do_sample": true,
+        "until": []
+      },
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 3.0,
+        "pretrained": "Qwen/Qwen3-Coder-30B-A3B-Instruct"
+      }
+    }
+  },
+  "versions": {
+    "longbench_2wikimqa": 3.0,
+    "longbench_dureader": 3.0,
+    "longbench_gov_report": 3.0,
+    "longbench_hotpotqa": 3.0,
+    "longbench_lcc": 3.0,
+    "longbench_lsht": 3.0,
+    "longbench_multi_news": 3.0,
+    "longbench_multifieldqa_en": 3.0,
+    "longbench_multifieldqa_zh": 3.0,
+    "longbench_musique": 3.0,
+    "longbench_narrativeqa": 3.0,
+    "longbench_passage_count": 3.0,
+    "longbench_passage_retrieval_en": 3.0,
+    "longbench_passage_retrieval_zh": 3.0,
+    "longbench_qasper": 3.0,
+    "longbench_qmsum": 3.0,
+    "longbench_repobench-p": 3.0,
+    "longbench_samsum": 3.0,
+    "longbench_trec": 3.0,
+    "longbench_triviaqa": 3.0,
+    "longbench_vcsum": 3.0
+  },
+  "n-shot": {
+    "longbench_2wikimqa": 0,
+    "longbench_dureader": 0,
+    "longbench_gov_report": 0,
+    "longbench_hotpotqa": 0,
+    "longbench_lcc": 0,
+    "longbench_lsht": 0,
+    "longbench_multi_news": 0,
+    "longbench_multifieldqa_en": 0,
+    "longbench_multifieldqa_zh": 0,
+    "longbench_musique": 0,
+    "longbench_narrativeqa": 0,
+    "longbench_passage_count": 0,
+    "longbench_passage_retrieval_en": 0,
+    "longbench_passage_retrieval_zh": 0,
+    "longbench_qasper": 0,
+    "longbench_qmsum": 0,
+    "longbench_repobench-p": 0,
+    "longbench_samsum": 0,
+    "longbench_trec": 0,
+    "longbench_triviaqa": 0,
+    "longbench_vcsum": 0
+  },
+  "higher_is_better": {
+    "longbench_2wikimqa": {
+      "qa_f1_score": true
+    },
+    "longbench_dureader": {
+      "rouge_zh_score": true
+    },
+    "longbench_gov_report": {
+      "rouge_score": true
+    },
+    "longbench_hotpotqa": {
+      "qa_f1_score": true
+    },
+    "longbench_lcc": {
+      "code_sim_score": true
+    },
+    "longbench_lsht": {
+      "classification_score": true
+    },
+    "longbench_multi_news": {
+      "rouge_score": true
+    },
+    "longbench_multifieldqa_en": {
+      "qa_f1_score": true
+    },
+    "longbench_multifieldqa_zh": {
+      "qa_f1_zh_score": true
+    },
+    "longbench_musique": {
+      "qa_f1_score": true
+    },
+    "longbench_narrativeqa": {
+      "qa_f1_score": true
+    },
+    "longbench_passage_count": {
+      "count_score": true
+    },
+    "longbench_passage_retrieval_en": {
+      "retrieval_score": true
+    },
+    "longbench_passage_retrieval_zh": {
+      "retrieval_zh_score": true
+    },
+    "longbench_qasper": {
+      "qa_f1_score": true
+    },
+    "longbench_qmsum": {
+      "rouge_score": true
+    },
+    "longbench_repobench-p": {
+      "code_sim_score": true
+    },
+    "longbench_samsum": {
+      "rouge_score": true
+    },
+    "longbench_trec": {
+      "classification_score": true
+    },
+    "longbench_triviaqa": {
+      "qa_f1_score": true
+    },
+    "longbench_vcsum": {
+      "rouge_zh_score": true
+    }
+  },
+  "n-samples": {
+    "longbench_2wikimqa": {
+      "original": 200,
+      "effective": 8
+    },
+    "longbench_dureader": {
+      "original": 200,
+      "effective": 8
+    },
+    "longbench_gov_report": {
+      "original": 200,
+      "effective": 8
+    },
+    "longbench_hotpotqa": {
+      "original": 200,
+      "effective": 8
+    },
+    "longbench_lcc": {
+      "original": 500,
+      "effective": 8
+    },
+    "longbench_lsht": {
+      "original": 200,
+      "effective": 8
+    },
+    "longbench_multi_news": {
+      "original": 200,
+      "effective": 8
+    },
+    "longbench_multifieldqa_en": {
+      "original": 150,
+      "effective": 8
+    },
+    "longbench_multifieldqa_zh": {
+      "original": 200,
+      "effective": 8
+    },
+    "longbench_musique": {
+      "original": 200,
+      "effective": 8
+    },
+    "longbench_narrativeqa": {
+      "original": 200,
+      "effective": 8
+    },
+    "longbench_passage_count": {
+      "original": 200,
+      "effective": 8
+    },
+    "longbench_passage_retrieval_en": {
+      "original": 200,
+      "effective": 8
+    },
+    "longbench_passage_retrieval_zh": {
+      "original": 200,
+      "effective": 8
+    },
+    "longbench_qasper": {
+      "original": 200,
+      "effective": 8
+    },
+    "longbench_qmsum": {
+      "original": 200,
+      "effective": 8
+    },
+    "longbench_repobench-p": {
+      "original": 500,
+      "effective": 8
+    },
+    "longbench_samsum": {
+      "original": 200,
+      "effective": 8
+    },
+    "longbench_trec": {
+      "original": 200,
+      "effective": 8
+    },
+    "longbench_triviaqa": {
+      "original": 200,
+      "effective": 8
+    },
+    "longbench_vcsum": {
+      "original": 200,
+      "effective": 8
+    }
+  },
+  "config": {
+    "model": "hf",
+    "model_args": "pretrained=Qwen/Qwen3-Coder-30B-A3B-Instruct",
+    "model_num_parameters": 30532122624,
+    "model_dtype": "torch.bfloat16",
+    "model_revision": "main",
+    "model_sha": "8110d98ad896c995124f3bc44b2f8dd695a4d252",
+    "batch_size": "2",
+    "batch_sizes": [],
+    "device": "cuda:0",
+    "use_cache": null,
+    "limit": 8.0,
+    "bootstrap_iters": 100000,
+    "gen_kwargs": null,
+    "random_seed": 0,
+    "numpy_seed": 1234,
+    "torch_seed": 1234,
+    "fewshot_seed": 1234
+  },
+  "git_hash": "d8edc9c",
+  "date": 1755233758.7969377,
+  "pretty_env_info": "PyTorch version: 2.8.0+cu128\nIs debug build: False\nCUDA used to build PyTorch: 12.8\nROCM used to build PyTorch: N/A\n\nOS: Ubuntu 22.04.5 LTS (x86_64)\nGCC version: (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0\nClang version: Could not collect\nCMake version: version 3.22.1\nLibc version: glibc-2.35\n\nPython version: 3.10.12 (main, May 27 2025, 17:12:29) [GCC 11.4.0] (64-bit runtime)\nPython platform: Linux-6.8.0-60-generic-x86_64-with-glibc2.35\nIs CUDA available: True\nCUDA runtime version: 12.8.93\nCUDA_MODULE_LOADING set to: LAZY\nGPU models and configuration: \nGPU 0: NVIDIA H100 80GB HBM3\nGPU 1: NVIDIA H100 80GB HBM3\n\nNvidia driver version: 570.148.08\ncuDNN version: Could not collect\nHIP runtime version: N/A\nMIOpen runtime version: N/A\nIs XNNPACK available: True\n\nCPU:\nArchitecture:                         x86_64\nCPU op-mode(s):                       32-bit, 64-bit\nAddress sizes:                        52 bits physical, 57 bits virtual\nByte Order:                           Little Endian\nCPU(s):                               52\nOn-line CPU(s) list:                  0-51\nVendor ID:                            GenuineIntel\nModel name:                           Intel(R) Xeon(R) Platinum 8480+\nCPU family:                           6\nModel:                                143\nThread(s) per core:                   2\nCore(s) per socket:                   26\nSocket(s):                            1\nStepping:                             8\nBogoMIPS:                             4000.00\nFlags:                                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon rep_good nopl xtopology cpuid tsc_known_freq pni pclmulqdq vmx ssse3 fma cx16 pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves avx_vnni avx512_bf16 wbnoinvd arat vnmi avx512vbmi umip pku ospke waitpkg avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq la57 rdpid bus_lock_detect cldemote movdiri movdir64b fsrm md_clear serialize tsxldtrk avx512_fp16 arch_capabilities\nVirtualization:                       VT-x\nHypervisor vendor:                    KVM\nVirtualization type:                  full\nL1d cache:                            1.6 MiB (52 instances)\nL1i cache:                            1.6 MiB (52 instances)\nL2 cache:                             104 MiB (26 instances)\nL3 cache:                             16 MiB (1 instance)\nNUMA node(s):                         1\nNUMA node0 CPU(s):                    0-51\nVulnerability Gather data sampling:   Not affected\nVulnerability Itlb multihit:          Not affected\nVulnerability L1tf:                   Not affected\nVulnerability Mds:                    Not affected\nVulnerability Meltdown:               Not affected\nVulnerability Mmio stale data:        Unknown: No mitigations\nVulnerability Reg file data sampling: Not affected\nVulnerability Retbleed:               Not affected\nVulnerability Spec rstack overflow:   Not affected\nVulnerability Spec store bypass:      Mitigation; Speculative Store Bypass disabled via prctl\nVulnerability Spectre v1:             Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:             Mitigation; Enhanced / Automatic IBRS; IBPB conditional; RSB filling; PBRSB-eIBRS SW sequence; BHI SW loop, KVM SW loop\nVulnerability Srbds:                  Not affected\nVulnerability Tsx async abort:        Mitigation; TSX disabled\n\nVersions of relevant libraries:\n[pip3] Could not collect\n[conda] Could not collect",
+  "transformers_version": "4.55.2",
+  "lm_eval_version": "0.4.9.1",
+  "upper_git_hash": null,
+  "tokenizer_pad_token": [
+    "<|endoftext|>",
+    "151643"
+  ],
+  "tokenizer_eos_token": [
+    "<|im_end|>",
+    "151645"
+  ],
+  "tokenizer_bos_token": [
+    null,
+    "None"
+  ],
+  "eot_token_id": 151645,
+  "max_length": 262144,
+  "task_hashes": {},
+  "model_source": "hf",
+  "model_name": "Qwen/Qwen3-Coder-30B-A3B-Instruct",
+  "model_name_sanitized": "Qwen__Qwen3-Coder-30B-A3B-Instruct",
+  "system_instruction": null,
+  "system_instruction_sha": null,
+  "fewshot_as_multiturn": false,
+  "chat_template": "{% macro render_extra_keys(json_dict, handled_keys) %}\n    {%- if json_dict is mapping %}\n        {%- for json_key in json_dict if json_key not in handled_keys %}\n            {%- if json_dict[json_key] is mapping %}\n                {{- '\\n<' ~ json_key ~ '>' ~ (json_dict[json_key] | tojson | safe) ~ '</' ~ json_key ~ '>' }}\n            {%- else %}\n                {{-'\\n<' ~ json_key ~ '>' ~ (json_dict[json_key] | string) ~ '</' ~ json_key ~ '>' }}\n            {%- endif %}\n        {%- endfor %}\n    {%- endif %}\n{% endmacro %}\n\n{%- if messages[0][\"role\"] == \"system\" %}\n    {%- set system_message = messages[0][\"content\"] %}\n    {%- set loop_messages = messages[1:] %}\n{%- else %}\n    {%- set loop_messages = messages %}\n{%- endif %}\n\n{%- if not tools is defined %}\n    {%- set tools = [] %}\n{%- endif %}\n\n{%- if system_message is defined %}\n    {{- \"<|im_start|>system\\n\" + system_message }}\n{%- else %}\n    {%- if tools is iterable and tools | length > 0 %}\n        {{- \"<|im_start|>system\\nYou are Qwen, a helpful AI assistant that can interact with a computer to solve tasks.\" }}\n    {%- endif %}\n{%- endif %}\n{%- if tools is iterable and tools | length > 0 %}\n    {{- \"\\n\\nYou have access to the following functions:\\n\\n\" }}\n    {{- \"<tools>\" }}\n    {%- for tool in tools %}\n        {%- if tool.function is defined %}\n            {%- set tool = tool.function %}\n        {%- endif %}\n        {{- \"\\n<function>\\n<name>\" ~ tool.name ~ \"</name>\" }}\n        {%- if tool.description is defined %}\n            {{- '\\n<description>' ~ (tool.description | trim) ~ '</description>' }}\n        {%- endif %}\n        {{- '\\n<parameters>' }}\n        {%- if tool.parameters is defined and tool.parameters is mapping and tool.parameters.properties is defined and tool.parameters.properties is mapping %}\n            {%- for param_name, param_fields in tool.parameters.properties|items %}\n                {{- '\\n<parameter>' }}\n                {{- '\\n<name>' ~ param_name ~ '</name>' }}\n                {%- if param_fields.type is defined %}\n                    {{- '\\n<type>' ~ (param_fields.type | string) ~ '</type>' }}\n                {%- endif %}\n                {%- if param_fields.description is defined %}\n                    {{- '\\n<description>' ~ (param_fields.description | trim) ~ '</description>' }}\n                {%- endif %}\n                {%- set handled_keys = ['name', 'type', 'description'] %}\n                {{- render_extra_keys(param_fields, handled_keys) }}\n                {{- '\\n</parameter>' }}\n            {%- endfor %}\n        {%- endif %}\n        {% set handled_keys = ['type', 'properties'] %}\n        {{- render_extra_keys(tool.parameters, handled_keys) }}\n        {{- '\\n</parameters>' }}\n        {%- set handled_keys = ['type', 'name', 'description', 'parameters'] %}\n        {{- render_extra_keys(tool, handled_keys) }}\n        {{- '\\n</function>' }}\n    {%- endfor %}\n    {{- \"\\n</tools>\" }}\n    {{- '\\n\\nIf you choose to call a function ONLY reply in the following format with NO suffix:\\n\\n<tool_call>\\n<function=example_function_name>\\n<parameter=example_parameter_1>\\nvalue_1\\n</parameter>\\n<parameter=example_parameter_2>\\nThis is the value for the second parameter\\nthat can span\\nmultiple lines\\n</parameter>\\n</function>\\n</tool_call>\\n\\n<IMPORTANT>\\nReminder:\\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\\n- Required parameters MUST be specified\\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\\n</IMPORTANT>' }}\n{%- endif %}\n{%- if system_message is defined %}\n    {{- '<|im_end|>\\n' }}\n{%- else %}\n    {%- if tools is iterable and tools | length > 0 %}\n        {{- '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- for message in loop_messages %}\n    {%- if message.role == \"assistant\" and message.tool_calls is defined and message.tool_calls is iterable and message.tool_calls | length > 0 %}\n        {{- '<|im_start|>' + message.role }}\n        {%- if message.content is defined and message.content is string and message.content | trim | length > 0 %}\n            {{- '\\n' + message.content | trim + '\\n' }}\n        {%- endif %}\n        {%- for tool_call in message.tool_calls %}\n            {%- if tool_call.function is defined %}\n                {%- set tool_call = tool_call.function %}\n            {%- endif %}\n            {{- '\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n            {%- if tool_call.arguments is defined %}\n                {%- for args_name, args_value in tool_call.arguments|items %}\n                    {{- '<parameter=' + args_name + '>\\n' }}\n                    {%- set args_value = args_value | tojson | safe if args_value is mapping else args_value | string %}\n                    {{- args_value }}\n                    {{- '\\n</parameter>\\n' }}\n                {%- endfor %}\n            {%- endif %}\n            {{- '</function>\\n</tool_call>' }}\n        {%- endfor %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"user\" or message.role == \"system\" or message.role == \"assistant\" %}\n        {{- '<|im_start|>' + message.role + '\\n' + message.content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.previtem and loop.previtem.role != \"tool\" %}\n            {{- '<|im_start|>user\\n' }}\n        {%- endif %}\n        {{- '<tool_response>\\n' }}\n        {{- message.content }}\n        {{- '\\n</tool_response>\\n' }}\n        {%- if not loop.last and loop.nextitem.role != \"tool\" %}\n            {{- '<|im_end|>\\n' }}\n        {%- elif loop.last %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- else %}\n        {{- '<|im_start|>' + message.role + '\\n' + message.content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n{%- endif %}\n",
+  "chat_template_sha": "7e0648e7a298d820992b258648406f1e563c7067e55be5ac31fa5c24538735d4",
+  "start_time": 17480.175218539,
+  "end_time": 19299.729815297,
+  "total_evaluation_time_seconds": "1819.5545967580001"
+}
