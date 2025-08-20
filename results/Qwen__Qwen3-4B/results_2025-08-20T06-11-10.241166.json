@@ -1,0 +1,128 @@
+{
+  "results": {
+    "aime24": {
+      "alias": "aime24",
+      "exact_match,none": 0.7,
+      "exact_match_stderr,none": 0.08509629433967632
+    }
+  },
+  "group_subtasks": {
+    "aime24": []
+  },
+  "configs": {
+    "aime24": {
+      "task": "aime24",
+      "tag": [
+        "math_word_problems"
+      ],
+      "dataset_path": "Maxwell-Jia/AIME_2024",
+      "training_split": "train",
+      "test_split": "train",
+      "fewshot_split": "train",
+      "doc_to_text": "Question: {{Problem}}\nAnswer:",
+      "doc_to_target": "{{Answer}}",
+      "unsafe_code": false,
+      "process_results": "def process_results(doc: dict, results: List[str]) -> Dict[str, int]:\n    retval = 0\n    response = results[0]\n    \n    # Try to extract answer from $...$ format first\n    indices = [pos for pos, char in enumerate(response) if char == \"$\"]\n    if len(indices) <= 1:\n        answer = response\n    else:\n        answer = response[indices[0] + 1 : indices[-1]]\n    \n    # Extract from \\\\boxed{} if present\n    boxed_answer = last_boxed_only_string(response)\n    if boxed_answer is not None:\n        try:\n            boxed_content = remove_boxed(boxed_answer)\n            if boxed_content is not None:\n                answer = boxed_content\n        except (AssertionError, IndexError):\n            pass\n    \n    # Check if answer matches target\n    answer_key = next(k for k in doc.keys() if k.lower() == \"answer\")\n    target = str(doc[answer_key])\n    if is_equiv(answer, target):\n        retval = 1\n\n    return {\"exact_match\": retval}\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "exact_match",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "until": [
+          "Question:",
+          "</s>",
+          "<|im_end|>",
+          "<|eot_id|>"
+        ],
+        "do_sample": false,
+        "temperature": 0.0,
+        "max_gen_toks": 32768
+      },
+      "repeats": 2,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 0.0,
+        "pretrained": "Qwen/Qwen3-4B",
+        "trust_remote_code": true
+      }
+    }
+  },
+  "versions": {
+    "aime24": 0.0
+  },
+  "n-shot": {
+    "aime24": 0
+  },
+  "higher_is_better": {
+    "aime24": {
+      "exact_match": true
+    }
+  },
+  "n-samples": {
+    "aime24": {
+      "original": 30,
+      "effective": 30
+    }
+  },
+  "config": {
+    "model": "hf",
+    "model_args": "pretrained=Qwen/Qwen3-4B,trust_remote_code=True",
+    "model_num_parameters": 4022468096,
+    "model_dtype": "torch.bfloat16",
+    "model_revision": "main",
+    "model_sha": "1cfa9a7208912126459214e8b04321603b3df60c",
+    "batch_size": "4",
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 100000,
+    "gen_kwargs": null,
+    "random_seed": 0,
+    "numpy_seed": 1234,
+    "torch_seed": 1234,
+    "fewshot_seed": 1234
+  },
+  "git_hash": "217f4999",
+  "date": 1755650583.8184345,
+  "pretty_env_info": "PyTorch version: 2.8.0+cu128\nIs debug build: False\nCUDA used to build PyTorch: 12.8\nROCM used to build PyTorch: N/A\n\nOS: Ubuntu 22.04.5 LTS (x86_64)\nGCC version: (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0\nClang version: Could not collect\nCMake version: version 3.22.1\nLibc version: glibc-2.35\n\nPython version: 3.10.12 (main, May 27 2025, 17:12:29) [GCC 11.4.0] (64-bit runtime)\nPython platform: Linux-6.8.0-60-generic-x86_64-with-glibc2.35\nIs CUDA available: True\nCUDA runtime version: 12.8.93\nCUDA_MODULE_LOADING set to: LAZY\nGPU models and configuration: GPU 0: NVIDIA H100 PCIe\nNvidia driver version: 570.148.08\ncuDNN version: Could not collect\nHIP runtime version: N/A\nMIOpen runtime version: N/A\nIs XNNPACK available: True\n\nCPU:\nArchitecture:                         x86_64\nCPU op-mode(s):                       32-bit, 64-bit\nAddress sizes:                        46 bits physical, 57 bits virtual\nByte Order:                           Little Endian\nCPU(s):                               26\nOn-line CPU(s) list:                  0-25\nVendor ID:                            GenuineIntel\nModel name:                           Intel(R) Xeon(R) Platinum 8480+\nCPU family:                           6\nModel:                                143\nThread(s) per core:                   1\nCore(s) per socket:                   1\nSocket(s):                            26\nStepping:                             8\nBogoMIPS:                             4000.00\nFlags:                                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon rep_good nopl xtopology cpuid tsc_known_freq pni pclmulqdq vmx ssse3 fma cx16 pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves avx_vnni avx512_bf16 wbnoinvd arat vnmi avx512vbmi umip pku ospke waitpkg avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq la57 rdpid bus_lock_detect cldemote movdiri movdir64b fsrm md_clear serialize tsxldtrk avx512_fp16 arch_capabilities\nVirtualization:                       VT-x\nHypervisor vendor:                    KVM\nVirtualization type:                  full\nL1d cache:                            832 KiB (26 instances)\nL1i cache:                            832 KiB (26 instances)\nL2 cache:                             104 MiB (26 instances)\nL3 cache:                             416 MiB (26 instances)\nNUMA node(s):                         1\nNUMA node0 CPU(s):                    0-25\nVulnerability Gather data sampling:   Not affected\nVulnerability Itlb multihit:          Not affected\nVulnerability L1tf:                   Not affected\nVulnerability Mds:                    Not affected\nVulnerability Meltdown:               Not affected\nVulnerability Mmio stale data:        Unknown: No mitigations\nVulnerability Reg file data sampling: Not affected\nVulnerability Retbleed:               Not affected\nVulnerability Spec rstack overflow:   Not affected\nVulnerability Spec store bypass:      Mitigation; Speculative Store Bypass disabled via prctl\nVulnerability Spectre v1:             Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:             Mitigation; Enhanced / Automatic IBRS; IBPB conditional; RSB filling; PBRSB-eIBRS SW sequence; BHI SW loop, KVM SW loop\nVulnerability Srbds:                  Not affected\nVulnerability Tsx async abort:        Mitigation; TSX disabled\n\nVersions of relevant libraries:\n[pip3] Could not collect\n[conda] Could not collect",
+  "transformers_version": "4.55.2",
+  "lm_eval_version": "0.4.9.1",
+  "upper_git_hash": null,
+  "tokenizer_pad_token": [
+    "<|endoftext|>",
+    "151643"
+  ],
+  "tokenizer_eos_token": [
+    "<|im_end|>",
+    "151645"
+  ],
+  "tokenizer_bos_token": [
+    null,
+    "None"
+  ],
+  "eot_token_id": 151645,
+  "max_length": 40960,
+  "task_hashes": {
+    "aime24": "6df5ef402ff4b8a0e778723bb1e228a2a12841f7d51d38be8705627e126142b3"
+  },
+  "model_source": "hf",
+  "model_name": "Qwen/Qwen3-4B",
+  "model_name_sanitized": "Qwen__Qwen3-4B",
+  "system_instruction": null,
+  "system_instruction_sha": null,
+  "fewshot_as_multiturn": false,
+  "chat_template": "{%- if tools %}\n    {{- '<|im_start|>system\\n' }}\n    {%- if messages[0].role == 'system' %}\n        {{- messages[0].content + '\\n\\n' }}\n    {%- endif %}\n    {{- \"# Tools\\n\\nYou may call one or more functions to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\\n\\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}\\n</tool_call><|im_end|>\\n\" }}\n{%- else %}\n    {%- if messages[0].role == 'system' %}\n        {{- '<|im_start|>system\\n' + messages[0].content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}\n{%- for message in messages[::-1] %}\n    {%- set index = (messages|length - 1) - loop.index0 %}\n    {%- if ns.multi_step_tool and message.role == \"user\" and message.content is string and not(message.content.startswith('<tool_response>') and message.content.endswith('</tool_response>')) %}\n        {%- set ns.multi_step_tool = false %}\n        {%- set ns.last_query_index = index %}\n    {%- endif %}\n{%- endfor %}\n{%- for message in messages %}\n    {%- if message.content is string %}\n        {%- set content = message.content %}\n    {%- else %}\n        {%- set content = '' %}\n    {%- endif %}\n    {%- if (message.role == \"user\") or (message.role == \"system\" and not loop.first) %}\n        {{- '<|im_start|>' + message.role + '\\n' + content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {%- set reasoning_content = '' %}\n        {%- if message.reasoning_content is string %}\n            {%- set reasoning_content = message.reasoning_content %}\n        {%- else %}\n            {%- if '</think>' in content %}\n                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}\n                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}\n            {%- endif %}\n        {%- endif %}\n        {%- if loop.index0 > ns.last_query_index %}\n            {%- if loop.last or (not loop.last and reasoning_content) %}\n                {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content.strip('\\n') + '\\n</think>\\n\\n' + content.lstrip('\\n') }}\n            {%- else %}\n                {{- '<|im_start|>' + message.role + '\\n' + content }}\n            {%- endif %}\n        {%- else %}\n            {{- '<|im_start|>' + message.role + '\\n' + content }}\n        {%- endif %}\n        {%- if message.tool_calls %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if (loop.first and content) or (not loop.first) %}\n                    {{- '\\n' }}\n                {%- endif %}\n                {%- if tool_call.function %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {{- '<tool_call>\\n{\"name\": \"' }}\n                {{- tool_call.name }}\n                {{- '\", \"arguments\": ' }}\n                {%- if tool_call.arguments is string %}\n                    {{- tool_call.arguments }}\n                {%- else %}\n                    {{- tool_call.arguments | tojson }}\n                {%- endif %}\n                {{- '}\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.first or (messages[loop.index0 - 1].role != \"tool\") %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- content }}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != \"tool\") %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n    {%- if enable_thinking is defined and enable_thinking is false %}\n        {{- '<think>\\n\\n</think>\\n\\n' }}\n    {%- endif %}\n{%- endif %}",
+  "chat_template_sha": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+  "start_time": 101107.554889835,
+  "end_time": 120796.01041377,
+  "total_evaluation_time_seconds": "19688.455523935"
+}
